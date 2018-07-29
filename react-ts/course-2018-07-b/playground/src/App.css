@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+.expired {
+  background-color: darkred;
+}
+
+button {
+  background-color: darkblue;
+  color: lightgrey;
+  border-radius: 6px;
+}
+
+.raised {
+  box-shadow: 0px 4px 10px grey;
+}
+
+.important {
+  box-shadow: 0px 4px 10px red;
+}
+
+#flip-coin-btn {
+  background-color: red;
+}
