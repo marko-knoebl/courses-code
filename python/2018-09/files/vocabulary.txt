@@ -1,0 +1,2 @@
+Apfel: apple
+Birne: pear
