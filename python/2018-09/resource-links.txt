@@ -1,0 +1,8 @@
+Präsentation:
+karuga.eu/courses-presentations/dist/python-de.html
+
+Präsentation (GitHub):
+https://github.com/marko-knoebl/courses-presentations
+
+Code (GitHub):
+https://github.com/marko-knoebl/courses-code

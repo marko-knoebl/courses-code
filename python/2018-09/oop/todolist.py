@@ -1,4 +1,8 @@
-class TodoList():
+import json
+import pickle
+
+
+class TodoList:
     def __init__(self, title):
         self.title = title
         self.todos = []
@@ -15,8 +19,20 @@ class TodoList():
         count_not_completed = len(self.todos) - count_completed
         return {"completed": count_completed, "open": count_not_completed}
 
+    def save(self, path):
+        todos_plain = []
+        for todo in self.todos:
+            plain_todo = {"title": todo.title, "completed": todo.completed}
+            todos_plain.append(plain_todo)
+        data_string = json.dumps(todos_plain, indent=4)
+        with open(path, mode="w", encoding="utf-8") as file:
+            file.write(data_string)
 
-class Todo():
+    def save_pickle(self, path):
+        with open(path, mode="wb") as file:
+            pickle.dump(self.todos, file)
+
+class Todo:
     def __init__(self, title):
         self.title = title
         self.completed = False
@@ -24,12 +40,13 @@ class Todo():
     def toggle(self):
         self.completed = not self.completed
 
-t = TodoList('groceries')
+
+t = TodoList("groceries")
 print(t.title)
 print(t.todos)
 
-t.add('apples')
-t.add('bananas')
+t.add("apples")
+t.add("bananas")
 
 print(t.todos)
 
@@ -42,3 +59,5 @@ print(t.stats())
 
 a = t.stats
 
+t.save("./oop/todos.json")
+t.save_pickle("./oop/todos.pickle")
