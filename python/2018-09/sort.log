@@ -1,0 +1,7 @@
+DEBUG:root:test
+DEBUG:root:sorting list: [5, 2, 8, 2, 3]
+DEBUG:root:new list: [2, 5, 8, 2, 3]
+DEBUG:root:new list: [2, 5, 2, 8, 3]
+DEBUG:root:new list: [2, 5, 2, 3, 8]
+DEBUG:root:new list: [2, 2, 5, 3, 8]
+DEBUG:root:new list: [2, 2, 3, 5, 8]
