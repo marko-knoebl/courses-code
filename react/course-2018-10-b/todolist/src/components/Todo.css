@@ -1,0 +1,10 @@
+.todo {
+  margin: 10px;
+  padding: 10px;
+  background-color: lightblue;
+}
+
+.todo.completed {
+  background-color: lightgrey;
+  text-decoration: line-through;
+}
