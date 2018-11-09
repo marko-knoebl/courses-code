@@ -2,10 +2,10 @@ import imapclient
 import re
 import pyzmail
 
-login_name = '...'
-password = '...'
+login_name = 'python.course.demo@gmail.com'
+password = 'spamandeggs'
 
-def get_emails():
+def get_emails(search_term="aaa"):
     imapObj = imapclient.IMAPClient("imap.gmail.com", ssl=True)
     imapObj.login(login_name, password)
     imapObj.select_folder("INBOX", readonly=True)
@@ -22,8 +22,8 @@ def get_emails():
         message_text: str = message.text_part.get_payload().decode(
             message.text_part.charset
         )
-        search_in_title = re.search("[pP]r(ue|ü)f", message.get_subject())
-        search_in_body = re.search("[pP]r(ue|ü)f", message_text)
+        search_in_title = re.search(search_term, message.get_subject())
+        search_in_body = re.search(search_term, message_text)
         if search_in_body or search_in_title:
 
             urls = re.findall("https?://.+?\\.com", message_text)
