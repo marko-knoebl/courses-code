@@ -9,8 +9,8 @@ categories = np.arange(num_dice, 6 * num_dice + 1)
 
 dice = np.random.randint(1, 7, (num_rolls, num_dice))
 
-sum_ = np.sum(dice, 1)
+sums = np.sum(dice, 1)
 
-plt.hist(sum_, categories)
+plt.hist(sums, categories)
 
 plt.show()
