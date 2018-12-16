@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "color": "gold",
+      "fontSize": 35,
+    }
+  }
+>
+  <span
+    onClick={[Function]}
+  >
+    ★
+  </span>
+  <span
+    onClick={[Function]}
+  >
+    ★
+  </span>
+  <span
+    onClick={[Function]}
+  >
+    ★
+  </span>
+  <span
+    onClick={[Function]}
+  >
+    ★
+  </span>
+  <span
+    onClick={[Function]}
+  >
+    ☆
+  </span>
+</div>
+`;
