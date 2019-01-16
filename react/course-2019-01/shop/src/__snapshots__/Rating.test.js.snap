@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="rating"
+>
+  <span
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+    ☆
+  </span>
+  <span
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+    ☆
+  </span>
+  <span
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+    ☆
+  </span>
+  <span
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "grey",
+      }
+    }
+  >
+    ☆
+  </span>
+  <span
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "grey",
+      }
+    }
+  >
+    ☆
+  </span>
+</div>
+`;
+
+exports[`renders correctly 2`] = `
+<div
+  className="rating"
+>
+  <span
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+    ☆
+  </span>
+  <span
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+    ☆
+  </span>
+  <span
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+    ☆
+  </span>
+  <span
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+    ☆
+  </span>
+  <span
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "grey",
+      }
+    }
+  >
+    ☆
+  </span>
+</div>
+`;
