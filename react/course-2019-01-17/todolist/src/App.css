@@ -1,0 +1,12 @@
+.todo {
+  font-size: 120%;
+  padding: 5px;
+  margin: 5px;
+  background-color: lightblue;
+}
+
+.todo.completed {
+  text-decoration: line-through;
+  color: grey;
+  background-color: lightgrey;
+}

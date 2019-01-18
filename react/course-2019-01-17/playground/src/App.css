@@ -1,0 +1,8 @@
+.todo {
+  font-size: 120%;
+}
+
+.todo.completed {
+  text-decoration: line-through;
+  color: grey;
+}
