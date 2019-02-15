@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<li
+  className="todo"
+  onClick={[Function]}
+>
+  <input
+    checked={false}
+    readOnly={true}
+    type="checkbox"
+  />
+  TODO: 
+  test
+  <button
+    onClick={[Function]}
+  >
+    X
+  </button>
+</li>
+`;

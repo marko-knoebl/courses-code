@@ -1,0 +1,15 @@
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.todo {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: lightblue;
+}
+
+.todo.completed {
+  background-color: lightgrey;
+  text-decoration: line-through;
+}
