@@ -68,11 +68,12 @@ class App extends Component<AppProps, AppState> {
       .then(response => response.json())
       .then(serverTodos => {
         this.setState({
-          todos: serverTodos.map((todo: TodoType) => ({
-            id: todo.id,
-            title: todo.title,
-            completed: todo.completed
-          })),
+          todos: serverTodos.map(
+            (serverTodo: TodoType & { userId: number }) => {
+              const { userId, ...todo } = serverTodo;
+              return todo;
+            }
+          ),
           isFetching: false
         });
       });
