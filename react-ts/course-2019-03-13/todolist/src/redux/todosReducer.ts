@@ -1,10 +1,7 @@
-import TodoType from '../TodoType';
 import { Action } from 'redux';
-
-interface TodosState {
-  todos: Array<TodoType>;
-  isFetching: boolean;
-}
+import TodosState from './TodosState';
+import { AppAction } from './rootReducer';
+import TodoType from '../TodoType';
 
 interface AddTodoAction extends Action {
   type: 'ADD_TODO';
@@ -20,7 +17,27 @@ interface TodoCompletedAction extends Action {
   };
 }
 
-type TodosAction = AddTodoAction | TodoCompletedAction;
+interface FetchTodosStartAction extends Action {
+  type: 'FETCH_TODOS_START';
+}
+
+interface FetchTodosSuccessAction extends Action {
+  type: 'FETCH_TODOS_SUCCESS';
+  payload: {
+    todos: Array<TodoType>;
+  };
+}
+
+interface FetchTodosErrorAction extends Action {
+  type: 'FETCH_TODOS_ERROR';
+}
+
+export type TodosAction =
+  | AddTodoAction
+  | TodoCompletedAction
+  | FetchTodosStartAction
+  | FetchTodosSuccessAction
+  | FetchTodosErrorAction;
 
 const initialState: TodosState = {
   todos: [
@@ -28,13 +45,14 @@ const initialState: TodosState = {
     { id: 2, title: 'gardening', completed: true },
     { id: 3, title: 'abc', completed: false }
   ],
-  isFetching: false
+  isFetching: false,
+  hasError: false
 };
 
 const todosReducer = (
   state: TodosState = initialState,
-  action: TodosAction
-) => {
+  action: AppAction
+): TodosState => {
   switch (action.type) {
     case 'ADD_TODO':
       return {
@@ -57,6 +75,25 @@ const todosReducer = (
           }
           return todo;
         })
+      };
+    case 'FETCH_TODOS_START':
+      return {
+        ...state,
+        isFetching: true
+      };
+    case 'FETCH_TODOS_SUCCESS':
+      return {
+        ...state,
+        todos: action.payload.todos,
+        isFetching: false,
+        hasError: false
+      };
+    case 'FETCH_TODOS_ERROR':
+      return {
+        ...state,
+        todos: [],
+        isFetching: false,
+        hasError: true
       };
     default:
       return state;

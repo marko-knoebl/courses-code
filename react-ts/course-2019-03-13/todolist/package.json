@@ -3,16 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/enzyme": "^3.9.0",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "24.0.11",
     "@types/node": "11.11.3",
     "@types/react": "16.8.8",
     "@types/react-dom": "16.8.2",
     "@types/react-redux": "^7.0.3",
+    "@types/react-router-dom": "^4.3.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.8",
     "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "typescript": "3.3.3333"
   },
   "scripts": {
@@ -29,5 +34,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@types/react-test-renderer": "^16.8.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "react-test-renderer": "^16.8.4"
+  }
 }

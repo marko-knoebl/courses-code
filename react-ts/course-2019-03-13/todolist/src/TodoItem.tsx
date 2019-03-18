@@ -17,12 +17,12 @@ class TodoItem extends Component<TodoItemProps, {}> {
   render = () => {
     return (
       <div
-        className={this.props.todo.completed ? 'todo completed' : 'todo'}
+        className={`todo${this.props.todo.completed ? ' completed' : ''}`}
         onClick={() => {
           this.props.onCompleted();
         }}
       >
-        {this.props.todo.completed ? 'DONE:' : 'TODO:'} {this.props.todo.title}
+        {this.props.todo.completed ? 'DONE: ' : 'TODO: '}{this.props.todo.title}
       </div>
     );
   };
