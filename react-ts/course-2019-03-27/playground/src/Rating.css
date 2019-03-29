@@ -1,0 +1,9 @@
+.star-inactive {
+  color: lightgrey;
+  font-size: 40px;
+}
+
+.star-active {
+  color: gold;
+  font-size: 40px;
+}

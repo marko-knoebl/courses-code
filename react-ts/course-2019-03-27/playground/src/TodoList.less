@@ -1,0 +1,12 @@
+@import './theme.less';
+
+.todo-item {
+  .theme-color-combination();
+  padding: @spacing;
+  margin: @spacing;
+  
+  &.completed {
+    background-color: lightgrey;
+    text-decoration: line-through;
+  }
+}
