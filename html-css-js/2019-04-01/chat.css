@@ -1,0 +1,75 @@
+#main {
+  height: 500px;
+  border: 1px solid blue;
+  position: relative;
+}
+
+@media (min-width: 800px) {
+  #main {
+    border: 1px solid red;
+  }
+}
+
+#message-view {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  background-color: lightgrey;
+  overflow: auto;
+}
+
+#messenger {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5p;
+  border: 1px solid darkgrey;
+  position: absolute;
+  bottom: 0px;
+  right: 30px;
+}
+
+/* bei kleinen bildschirmen: vollbild */
+@media (max-width: 500px) {
+  #messenger {
+    position: static;
+    width: 100%;
+  }
+
+  #message-view {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#new-message {
+  align-self: stretch;
+  display: flex;
+}
+
+#new-message-input {
+  display: block;
+  flex-grow: 1;
+}
+
+#message-view>.message {
+  margin: 5px;
+  border: 1px solid darkgrey;
+  box-shadow: 0 2px 5px grey;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+#message-view>.message.sent {
+  align-self: flex-end;
+  background-color: #e0e0e0;
+  border-top-right-radius: 0;
+}
+
+#message-view>.message.received {
+  align-self: flex-start;
+  background-color: #90e090;
+  border-top-left-radius: 0;
+}

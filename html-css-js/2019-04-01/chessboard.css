@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+}
+
+#board {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  height: 12.5%;
+}
+
+.field {
+  width: 12.5%;
+  height: 100%;
+}
+
+.field.black {
+  background-color: black;
+}
+
+.field.white {
+  background-color: white;
+}
+
+.piece {
+  margin: 10px;
+  position: absolute;
+  background-color: grey;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: top 1s, left 1s;
+}

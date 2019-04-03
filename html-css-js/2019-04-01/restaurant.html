@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Markos Restaurant</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Markos Restaurant</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#opening-hours">Öffnungszeiten<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#reservation">Reservierung</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Markos Restaurant</h1>
+
+    <div class="row">
+      <div class="col">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="http://www.landgasthotel-sonne.de/images/services/2.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://www.southtyroleanqualityfood.com/media/1200x0/5d86486d-d1ba-4e66-a4d2-18486ecd0820/rindersteak-krone.jpg"
+                class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="http://www.alcortile.de/uploads/tx_templavoila/alcortile_Pasta_180116_01.jpg"
+                class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col" id="opening-hours">
+        <h2>Öffnungszeiten</h2>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Zeiten</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Mo</th>
+              <td>9:00-23:00</td>
+            </tr>
+            <tr>
+              <th>Di</th>
+              <td rowspan="2">10:00-23:00</td>
+            </tr>
+            <tr>
+              <th>Mi</th>
+            </tr>
+            <tr>
+              <th>Do</th>
+              <td>Zeiten</td>
+            </tr>
+            <tr>
+              <th>Fr</th>
+              <td>Zeiten</td>
+            </tr>
+            <tr>
+              <th>Tag</th>
+              <td>Zeiten</td>
+            </tr>
+            <tr>
+              <th>Tag</th>
+              <td>Zeiten</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col" id="reservation">
+        <h2>Reservierung</h2>
+        <form method="POST">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input class="form-control" id="name" name="name" placeholder="Name" required minlength="3" />
+          </div>
+
+          <label for="num_guests">Personenanzahl:</label>
+          <input id="num_guests" name="num_guests" type="number" /><br />
+          <label for="date">Datum:</label>
+          <input id="date" name="date" type="date" /><br />
+          <input type="checkbox" name="nonsmoker" id="nonsmoker" />
+          <label for="nonsmoker">Nichtraucher</label><br />
+          <button class="btn btn-primary">Reservieren</button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <svg class="col" xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="300"
+        viewBox="-150 0 300 300">
+        <g transform="translate(0, 0) rotate(45, 0, 200)">
+          <rect x="-10" y="100" width="20" height="200" fill="grey"></rect>
+          <circle r="10" cy="300" fill="grey"></circle>
+          <ellipse cy="100" rx="35" ry="45" fill="grey"></ellipse>
+        </g>
+        <path transform="rotate(-45, 0, 200)" d="
+          M -10,310 L 10,310 L10,100
+          C 10,90 20,80 20,70
+          L 19,0 L13,0 L11,70 L5,70 L3,0
+          L-3,0 L-5,70 L-11,70 L-13,0 L-19,0 L-20,70
+          C-20,80 -10,90 -10,100 Z" fill="darkgrey" />
+      </svg>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
