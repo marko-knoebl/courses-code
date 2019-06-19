@@ -1,0 +1,6 @@
+apples
+bananas
+cherries
+milk
+sugar
+water
