@@ -1,0 +1,9 @@
+.star {
+  font-size: 30px;
+  color: lightgrey;
+  user-select: none;
+}
+
+.star.active {
+  color: gold;
+}
