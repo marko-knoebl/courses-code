@@ -1,0 +1,13 @@
+.todo {
+  background-color: lightcoral;
+  margin: 5px;
+  padding: 5px;
+}
+
+.todo.completed {
+  background-color: lightgrey;
+}
+
+.todo.completed>.label {
+  text-decoration: line-through;
+}

@@ -1,0 +1,7 @@
+.star {
+    color: lightgrey;
+}
+
+.star.active {
+    color: gold;
+}
