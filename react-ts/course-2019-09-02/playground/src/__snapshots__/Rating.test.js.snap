@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot tests renders a rating of 3 1`] = `
+<div>
+  <span
+    className="star active"
+    onClick={[Function]}
+  >
+    ★
+  </span>
+  <span
+    className="star active"
+    onClick={[Function]}
+  >
+    ★
+  </span>
+  <span
+    className="star active"
+    onClick={[Function]}
+  >
+    ★
+  </span>
+  <span
+    className="star"
+    onClick={[Function]}
+  >
+    ☆
+  </span>
+  <span
+    className="star"
+    onClick={[Function]}
+  >
+    ☆
+  </span>
+</div>
+`;

@@ -4,6 +4,11 @@ import Slideshow from "./Slideshow";
 import Rating from "./Rating";
 import "./App.css";
 import ToggleButton from "./ToggleButton";
+import DocumentTitle from "./DocumentTitle";
+import DocumentTitleInput from "./DocumentTitleInput";
+import DocumentTitleHook from "./DocumentTitleHook";
+import ClockClass from "./ClockClass";
+import Clock from "./Clock";
 
 const getImgUrl = id => "https://picsum.photos/200?image=" + id.toString();
 
@@ -17,15 +22,19 @@ function App() {
     { id: 2, title: "cooking", completed: true },
     { id: 3, title: "gardening", completed: false }
   ]);
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState("as");
   const [rating1, setRating1] = useState(3);
   const [option1, setOption1] = useState(false);
+  const [title, setTitle] = useState("Playground");
 
   const articleName = "ReactJS";
 
   return (
     <div className="App">
-      <h1> My App</h1>
+      <h1>{title}</h1>
+      {/* <DocumentTitle>{`${title} (${inputText})`}</DocumentTitle> */}
+      {/* <DocumentTitleInput initialTitle="abc" /> */}
+      <DocumentTitleHook>{`${title} (${inputText})`}</DocumentTitleHook>
       <div>Ein Jahr hat {365 * 24} Stunden</div>
       <div>Heute ist der {new Date().toLocaleDateString()}</div>
       <div>{Math.random() > 0.5 ? "heads" : "tails"}</div>
@@ -73,6 +82,9 @@ function App() {
           }}
         />
       </div>
+      <h2>Time</h2>
+      <ClockClass />
+      <Clock />
     </div>
   );
 }
