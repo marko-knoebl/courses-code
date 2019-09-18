@@ -30,6 +30,12 @@ class Money:
     def __str__(self):
         return f"{self.amount}{'€' if self.currency == 'EUR' else 'USD'}"
 
+    def __mul__(self, other):
+        return Money(self.currency, self.amount * other)
+
+    def __rmul__(self, other):
+        return Money(self.currency, self.amount * other)
+
     def to_usd(self):
         if self.currency == "USD":
             return self
@@ -92,6 +98,9 @@ b.currency = "EUR"
 print(b.amount) # 13.95
 b.currency = "USD"
 print(b.amount)
+
+print(a * 3)
+print(3 * a)
 
 print(Money.from_string("12€").amount)
 print(Money.from_string("7asdfvsdf23€"))
