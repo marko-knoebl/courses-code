@@ -1,0 +1,28 @@
+def check(isbn):                                                                   1
+def check(isbn):                                                                   1
+check_digit = int(isbn[-1])                                                        2
+check_digit = int(isbn[-1])                                                        2
+                                                                                   3
+                                                                                   3
+sum = 0                                                                            4
+sum = 0                                                                            4
+                                                                                   5
+                                                                                   5
+for i in range(9):                                                                 6
+for i in range(9):                                                                 6
+# i = 0 ... 8                                                                      7
+# i = 0 ... 8                                                                      7
+digit = int(isbn[i])                                                               8
+digit = int(isbn[i])                                                               8
+sum += digit * (i+1)                                                               9
+sum += digit * (i+1)                                                               9
+                                                                                  10
+                                                                                  10
+actual_digit = sum % 11                                                           11
+actual_digit = sum % 11                                                           11
+is_valid = actual_digit == check_digit                                            12
+is_valid = actual_digit == check_digit                                            12
+                                                                                  13
+                                                                                  13
+return is_valid                                                                   14
+return is_valid                                                                   14
