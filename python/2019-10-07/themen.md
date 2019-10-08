@@ -1,0 +1,11 @@
+- objektorientierte Programmierung fortgeschritten
+- unit tests
+- GUI
+- threads / parallelisierung
+- SQL / datenbanken / datenbankanbindung
+- Arbeiten mit Dateien
+
+- reguläre Ausdrücke
+- Webentwicklung client
+- Webentwicklung server
+- Excel-Dateien
