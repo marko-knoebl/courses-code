@@ -25,7 +25,12 @@ secret_number = random.randint(1, 100)
 while True:
     print("Enter a number (1 - 100):")
     guessed_number_str = input()
-    guessed_number = int(guessed_number_str)
+
+    try:
+        guessed_number = int(guessed_number_str)
+    except ValueError:
+        print("Invalid input")
+        continue
 
     if guessed_number == secret_number:
         print("Correct!")

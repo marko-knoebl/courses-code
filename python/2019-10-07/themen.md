@@ -1,10 +1,11 @@
-- objektorientierte Programmierung fortgeschritten
-- unit tests
-- GUI
-- threads / parallelisierung
-- SQL / datenbanken / datenbankanbindung
-- Arbeiten mit Dateien
+x GUI
+x objektorientierte Programmierung fortgeschritten
+x threads / parallelisierung
+- unit tests (2)
+x SQL / datenbanken / datenbankanbindung
+x Arbeiten mit Dateien
 
+- GIT / Versionskontrolle (3)
 - reguläre Ausdrücke
 - Webentwicklung client
 - Webentwicklung server
