@@ -1,0 +1,14 @@
+.todolist {
+  list-style: none;
+}
+
+.todo {
+  background-color: lightblue;
+  margin: 8px;
+  padding: 8px;
+}
+
+.todo.completed {
+  background-color: lightgrey;
+  text-decoration: line-through;
+}

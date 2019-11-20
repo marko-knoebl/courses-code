@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot with 2 stars 1`] = `
+<div>
+  <span
+    onClick={[Function]}
+  >
+    ★
+  </span>
+  <span
+    onClick={[Function]}
+  >
+    ★
+  </span>
+  <span
+    onClick={[Function]}
+  >
+    ☆
+  </span>
+  <span
+    onClick={[Function]}
+  >
+    ☆
+  </span>
+  <span
+    onClick={[Function]}
+  >
+    ☆
+  </span>
+  <span
+    onClick={[Function]}
+  >
+    ☆
+  </span>
+</div>
+`;
