@@ -1,0 +1,15 @@
+.todolist {
+  padding-left: 0px;
+}
+
+.todo {
+  margin: 8px;
+  padding: 8px;
+  background-color: lightblue;
+  list-style: none;
+}
+
+.todo.completed {
+  background-color: lightgrey;
+  text-decoration: line-through;
+}

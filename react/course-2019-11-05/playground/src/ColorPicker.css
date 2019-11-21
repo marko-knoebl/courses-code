@@ -1,0 +1,6 @@
+.color-preview {
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  border: 4px solid #222;
+}
