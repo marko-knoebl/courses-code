@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 
 import styles from "./TodoList.module.css";
 
@@ -52,4 +52,4 @@ function TodoList() {
   return <ul>{elements}</ul>;
 }*/
 
-export default TodoList;
+export default memo(TodoList);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -23,4 +23,4 @@ function Counter() {
   );
 }
 
-export default Counter;
+export default memo(Counter);

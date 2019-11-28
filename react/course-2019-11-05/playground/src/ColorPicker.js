@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 
 import "./ColorPicker.css";
 
@@ -92,4 +92,4 @@ ColorPicker.propTypes = {
   onChange: PropTypes.func
 };
 
-export default ColorPicker;
+export default memo(ColorPicker);
