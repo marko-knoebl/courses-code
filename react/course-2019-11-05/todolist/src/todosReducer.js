@@ -15,6 +15,8 @@ function todosReducer(oldState, action) {
       return oldState.map(todo =>
         todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
       );
+    case "DELETE_COMPLETED":
+      return oldState.filter(todo => !todo.completed);
     default:
       throw new Error("unknown action type");
   }
