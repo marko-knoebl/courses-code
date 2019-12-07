@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="todoItem completed"
+  onClick={[Function]}
+>
+  DONE: 
+  a
+  <button
+    onClick={[Function]}
+  >
+    X
+  </button>
+</div>
+`;
