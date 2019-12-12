@@ -1,14 +1,19 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
-function AddTodo({ addTodo }) {
+function AddTodo() {
   const [newTitle, setNewTitle] = useState("");
+  const dispatch = useDispatch();
 
   return (
     <form
       onSubmit={event => {
         event.preventDefault();
         if (newTitle) {
-          addTodo(newTitle);
+          dispatch({
+            type: "ADD_TODO",
+            title: newTitle
+          });
           setNewTitle("");
         }
       }}

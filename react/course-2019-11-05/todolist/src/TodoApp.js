@@ -1,52 +1,50 @@
-import React, { useReducer } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import "./TodoApp.css";
 
-import todosReducer from "./todosReducer";
-import TodoList from "./TodoList";
 import AddTodo from "./AddTodo";
+import TodoListContainer from "./TodoListContainer";
+import { loadTodos } from "./state/actions";
 
 function TodoApp() {
-  const [todos, dispatchAction] = useReducer(todosReducer, [
-    { id: 1, title: "groceries", completed: true },
-    { id: 2, title: "gardening", completed: false }
-  ]);
+  const dispatch = useDispatch();
+  const addTodoFormVisible = useSelector(
+    state => state.uiData.addTodoFormVisible
+  );
 
   return (
     <div className="App">
       <h1>Todo</h1>
-      <TodoList
-        todos={todos}
-        toggleTodo={id => dispatchAction({ type: "TOGGLE_TODO", id: id })}
-        deleteTodo={id =>
-          dispatchAction({
-            type: "DELETE_TODO",
-            id: id
-          })
-        }
-      />
+      <TodoListContainer />
       <div>
-        <button onClick={() => dispatchAction({ type: "DELETE_COMPLETED" })}>
+        <button onClick={() => dispatch({ type: "DELETE_COMPLETED" })}>
           delete completed todos
         </button>
       </div>
-      <AddTodo
-        addTodo={newTitle =>
-          dispatchAction({
-            type: "ADD_TODO",
-            title: newTitle
+      <button
+        onClick={() =>
+          dispatch({
+            type: "SET_ADD_FORM_VISIBLE",
+            visible: !addTodoFormVisible
           })
         }
-      />
+      >
+        {addTodoFormVisible ? "hide form" : "show form"}
+      </button>
+      {addTodoFormVisible ? <AddTodo /> : null}
+      <div>
+        <button
+          onClick={() => {
+            // dispatch a thunk action
+            dispatch(loadTodos);
+          }}
+        >
+          load todos from API
+        </button>
+      </div>
     </div>
   );
 }
 
 export default TodoApp;
-
-// TODO: event "deleteTodo" between TodoItem & TodoList
-// TODO: event "deleteTodo" between TodoList & TodoApp
-// TODO: action "DELETE_TODO" triggered from TodoApp
-
-// TODO: AddTodo with internal state "newTitle"
-// TODO: event "addTodo" between AddTodo & TodoApp
-// TODO: action "ADD_TODO" triggered from TodoApp

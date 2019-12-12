@@ -1,4 +1,9 @@
-function todosReducer(oldState, action) {
+const initialState = [
+  { id: 1, title: "groceries", completed: true },
+  { id: 2, title: "gardening", completed: false }
+];
+
+function todosReducer(oldState = initialState, action) {
   switch (action.type) {
     case "ADD_TODO":
       const newId = oldState.reduce(
@@ -17,8 +22,10 @@ function todosReducer(oldState, action) {
       );
     case "DELETE_COMPLETED":
       return oldState.filter(todo => !todo.completed);
+    case "LOAD_TODOS_SUCCESS":
+      return action.todos;
     default:
-      throw new Error("unknown action type");
+      return oldState;
   }
 }
 
