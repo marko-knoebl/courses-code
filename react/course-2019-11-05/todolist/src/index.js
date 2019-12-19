@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
+
 import "./index.css";
 import TodoApp from "./TodoApp";
 import * as serviceWorker from "./serviceWorker";
@@ -13,7 +15,9 @@ console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>
-    <TodoApp />
+    <BrowserRouter>
+      <TodoApp />
+    </BrowserRouter>
   </Provider>,
   document.getElementById("root")
 );

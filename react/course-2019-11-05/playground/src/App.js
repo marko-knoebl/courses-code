@@ -7,6 +7,7 @@ import TodoList from "./TodoList";
 import Rating from "./Rating";
 import ToggleButton from "./ToggleButton";
 import ColorPicker from "./ColorPicker";
+import SpaceX from "./SpaceX";
 
 function rgbStringFromValues(values) {
   return `rgb(${values[0]} ,${values[1]} ,${values[2]})`;
@@ -60,6 +61,7 @@ function App() {
         {option1 && <h2>hello</h2>}
       </div>
       <ColorPicker value={color} onChange={newColor => setColor(newColor)} />
+      <SpaceX />
     </div>
   );
 }
