@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Counter from "./Counter";
 import Slideshow from "./Slideshow";
+import Rating from "./Rating";
 
 function App() {
   const dateString = new Date().toLocaleDateString();
@@ -19,6 +20,9 @@ function App() {
 
   const [username, setUsername] = useState("abc");
   const [password, setPassword] = useState("");
+
+  const [product1Rating, setProduct1Rating] = useState(3);
+  const [product2Rating, setProduct2Rating] = useState(4);
 
   return (
     <div className="App">
@@ -48,6 +52,25 @@ function App() {
       <h4>
         {username.toUpperCase()}(length: {username.length})
       </h4>
+      <h3>Products</h3>
+      <p>
+        product 1:{" "}
+        <Rating
+          stars={product1Rating}
+          onStarsChange={newRating => {
+            setProduct1Rating(newRating);
+          }}
+        />
+      </p>
+      <p>
+        product 2:{" "}
+        <Rating
+          stars={product2Rating}
+          onStarsChange={newRating => {
+            setProduct2Rating(newRating);
+          }}
+        />
+      </p>
     </div>
   );
 }
