@@ -1,0 +1,15 @@
+ul {
+  padding-left: 0px;
+}
+
+.todoitem {
+  margin: 5px;
+  padding: 5px;
+  background-color: lightcoral;
+  list-style: none;
+}
+
+.todoitem.completed {
+  background-color: lightgrey;
+  text-decoration: line-through;
+}
