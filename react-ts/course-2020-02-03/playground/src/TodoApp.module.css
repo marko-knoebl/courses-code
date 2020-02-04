@@ -1,0 +1,10 @@
+.todoitem {
+  margin: 8px;
+  padding: 8px;
+  background-color: lightcoral;
+}
+
+.todoitem[d-completed="true"] {
+  background-color: lightgray;
+  text-decoration: line-through;
+}
