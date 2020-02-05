@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<li
+  className="todoitem"
+  d-completed="true"
+  onClick={[Function]}
+>
+  DONE
+  : 
+  a
+</li>
+`;

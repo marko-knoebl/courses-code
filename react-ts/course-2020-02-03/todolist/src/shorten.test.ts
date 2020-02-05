@@ -17,3 +17,9 @@ describe("strings that are too long", () => {
     expect(actual).toEqual(expected);
   });
 });
+
+describe("strings that are short enough", () => {
+  it("leaves 'loremipsum' unchanged given max length 10", () => {
+    expect(shorten("loremipsum", 10)).toBe("loremipsum");
+  });
+});

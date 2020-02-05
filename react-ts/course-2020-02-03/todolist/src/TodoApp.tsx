@@ -1,7 +1,6 @@
-import React, { useState, FC, useEffect, useReducer } from "react";
+import React, { FC, useEffect, useReducer } from "react";
 import AddTodo from "./AddTodo";
 import TodoList from "./TodoList";
-import { TodoType } from "./TodoType";
 import { AppBar, Toolbar, Typography } from "@material-ui/core";
 import todosReducer from "./todosReducer";
 

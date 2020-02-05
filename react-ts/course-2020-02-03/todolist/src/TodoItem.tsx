@@ -8,16 +8,16 @@ type TodoItemProps = {
 };
 
 const TodoItem = (props: TodoItemProps) => {
+  const completed = props.completed;
   return (
     <li
-      d-completed={props.completed ? "true" : "false"}
+      d-completed={completed ? "true" : "false"}
       onClick={() => {
         props.onToggle();
       }}
-      className={props.completed ? styles.todoitem : styles.todoitem}
+      className={styles.todoitem}
     >
-      {props.completed ? "DONE: " : "TODO: "}
-      {props.title}
+      {completed ? "DONE" : "TODO"}: {props.title}
     </li>
   );
 };
