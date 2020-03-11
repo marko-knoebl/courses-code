@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<body>
+  <div>
+    <div>
+      <span
+        style="color: gold;"
+      >
+        ★
+      </span>
+      <span
+        style="color: gold;"
+      >
+        ★
+      </span>
+      <span
+        style="color: gold;"
+      >
+        ★
+      </span>
+      <span
+        style="color: lightgrey;"
+      >
+        ☆
+      </span>
+      <span
+        style="color: lightgrey;"
+      >
+        ☆
+      </span>
+    </div>
+  </div>
+</body>
+`;
