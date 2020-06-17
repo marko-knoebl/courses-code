@@ -1,0 +1,7 @@
+.todoitem {
+  background-color: lightblue;
+}
+
+.todoitem.completed {
+  background-color: lightgrey;
+}
