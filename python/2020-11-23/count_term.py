@@ -1,6 +1,12 @@
 import os
 import os.path
 
+import logging
+logging.basicConfig(
+    filename="count_term.log",
+    level=logging.DEBUG,
+    filemode="w"
+)
 
 def count_term(term):
 
@@ -11,7 +17,11 @@ def count_term(term):
             with open(filename, encoding="utf-8") as file:
                 file_content = file.read()
         except PermissionError:
-            print(f"ignored {filename}")
+            logging.debug(f"ignored {filename}")
+            continue
+        except UnicodeDecodeError:
+            logging.debug(f"ignored {filename}: could not read as unicode text")
+            continue
         print(f"{filename}: {file_content.count(term)}")
 
 
