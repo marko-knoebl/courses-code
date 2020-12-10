@@ -1,0 +1,9 @@
+.todoitem {
+  padding: 8px;
+  background-color: lightblue;
+}
+
+.completed {
+  background-color: lightgrey;
+  text-decoration: line-through;
+}
