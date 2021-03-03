@@ -1,18 +1,19 @@
-import { Todo } from "./Todo";
-import {useParams} from "react-router-dom"
+import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import TodosContext from "./TodosContext";
 
-type Props = { todos: Array<Todo> };
-
-function Stats(props: Props) {
+function Stats() {
   const routeParams = useParams();
 
-  const numActiveTodos = props.todos.filter((t) => !t.completed).length;
+  const context = useContext(TodosContext);
+
+  const numActiveTodos = context.todos.filter((t) => !t.completed).length;
 
   if (routeParams.lang === "en") {
     return (
       <div>
         <h2>Statistics</h2>
-        <p>number of todos: {props.todos.length}</p>
+        <p>number of todos: {context.todos.length}</p>
         <p>number of active todos: {numActiveTodos}</p>
       </div>
     );
@@ -20,7 +21,7 @@ function Stats(props: Props) {
     return (
       <div>
         <h2>Statistiken</h2>
-        <p>Anzahl an Todos: {props.todos.length}</p>
+        <p>Anzahl an Todos: {context.todos.length}</p>
         <p>Anzahl an aktiven: {numActiveTodos}</p>
       </div>
     );
