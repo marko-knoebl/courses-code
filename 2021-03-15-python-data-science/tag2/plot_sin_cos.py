@@ -44,3 +44,20 @@ plt.show()
 plt.plot(x, y_cos)
 
 plt.show()
+
+# Code ist online:
+# https://github.com/marko-knoebl/courses-code/tree/master/2021-03-15-python-data-science
+
+# Setup für nach der Pause:
+# - Jupyter-Notebook (entweder VS Code mit Python - oder z.B. google colab)
+#   - Python Extension
+#   - F1 -> "Jupyter: Create New Blank Notebook"
+# - Installation der folgenden Pakete
+#   pip install jupyter numpy pyplot pandas
+
+# Einrichtung des Python-Pfades:
+# Programm "Umgebungsvariablen für dieses Konto bearbeiten"
+# Path-Variable: "C:/Users/Admin/AppData/Local/Programs/Python/Python39/" hinzufügen
+
+# Weiter geht's um 13:15
+# Ich bin ab ca 13:00 wieder verfügbar - für Fragen
