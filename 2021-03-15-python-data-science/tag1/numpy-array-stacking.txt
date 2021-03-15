@@ -1,0 +1,18 @@
++--------------+-----------------------------------------------------+
+| Methode      | Beschreibung                                        |
++--------------+-----------------------------------------------------+
+| concatenate  | Join sequence of arrays along EXISTING axis         |
+| stack        | Join sequence of arrays along NEW axis              |
+| vstack       | Stack arrays in sequence vertically (row wise)      |
+| row_stack    | Stack arrays in sequence vertically (row wise)      |
+| hstack       | Stack arrays in sequence horizontally (column wise) |
+| column_stack | Stack 1-D arrays as columns into a 2-D array        |
++--------------+-----------------------------------------------------+
+| block        | Assemble ND-array from nested lists of blocks       |
+| tile         | Tile an array                                       |
+| repeat       | Repeat elements of an array                         |
+| broadcast_to | Broadcast an array to a new shape                   |
++--------------+-----------------------------------------------------+
+| dsplit       | Split array along third axis                        |
++--------------+-----------------------------------------------------+
+
