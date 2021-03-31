@@ -29,3 +29,5 @@ possible methods:
 - `.summarize()`
 - `.visualize_feature_a()`
 - `.visualize_feature_b()`
+- `.export_to_excel()`
+- `.export_subset_to_hdf5()`
