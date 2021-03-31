@@ -11,11 +11,15 @@ class TitanicDataNotLoadedError(Exception):
 
 class TitanicData:
     def load_passenger_data(self):
-        self._passenger_dataframe = pd.read_csv(
+        loaded_data = pd.read_csv(
             "https://public.opendatasoft.com/"
             + "explore/dataset/titanic-passengers/download",
             delimiter=";",
         )
+        loaded_data["survived"] = loaded_data["survived"].replace(
+            {"Yes": True, "No": False}
+        )
+        self._passenger_dataframe = loaded_data
 
     def get_random_passenger(self):
         # get a random sample of 1 element,
@@ -69,6 +73,7 @@ class TitanicData:
     def plot_num_siblings_spouses(self):
         self._passenger_dataframe["sibsp"].value_counts().sort_index().plot.bar()
         plt.show()
+
 
 # NEW task:
 # import in a nicer format:
