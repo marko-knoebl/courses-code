@@ -11,7 +11,7 @@ for i in range(5):
 
 print(titanic_data.get_adult_survivors())
 
-# titanic_data.plot_age_hist()
-# titanic_data.plot_age_box()
+titanic_data.plot_age_hist()
+titanic_data.plot_age_box()
 titanic_data.plot_sex_pie()
 titanic_data.plot_num_siblings_spouses()

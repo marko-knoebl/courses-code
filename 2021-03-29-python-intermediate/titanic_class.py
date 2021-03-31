@@ -44,18 +44,18 @@ class TitanicData:
             pronoun = "he"
 
         print(f"{name} was {age:.0f} when {pronoun} boarded the Titanic.")
-        if survived == "Yes":
+        if survived == True:
             print(f"{pronoun.capitalize()} survived.")
         else:
             print(f"{pronoun.capitalize()} did not survive.")
 
     def get_adult_survivors(self):
 
-        return self._passenger_dataframe.query("age > 17 and survived=='Yes'")
+        return self._passenger_dataframe.query("age > 17 and survived==True")
 
         # return self._passenger_dataframe.loc[
         #     (self._passenger_dataframe["age"] >= 18)
-        #     & (self._passenger_dataframe["survived"] == "Yes")
+        #     & (self._passenger_dataframe["survived"] == True)
         # ]
 
     def plot_age_hist(self):
