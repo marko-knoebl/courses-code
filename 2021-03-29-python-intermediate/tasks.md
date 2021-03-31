@@ -14,8 +14,8 @@ others (bigger datasets):
 
 - house data and house prices in california (for 20,000 small regions): http://lib.stat.cmu.edu/datasets/houses.zip (use numpy's loadtxt)
 - TrackML particle tracking challenge (data visualization):
-- data source: https://gitlab.cern.ch/msmk/trackml-dataset
-- simple visualization: https://www.kaggle.com/wesamelshamy/trackml-problem-explanation-and-data-exploration
+  - data source: https://gitlab.cern.ch/msmk/trackml-dataset
+  - simple visualization: https://www.kaggle.com/wesamelshamy/trackml-problem-explanation-and-data-exploration
 - other popular datasets on kaggle (account needed to work online): https://www.kaggle.com/datasets?topic=popularDataset&sort=votes
 
 ## Potential tasks
