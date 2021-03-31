@@ -2,6 +2,7 @@
 # but data is stored in a class
 
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 class TitanicDataNotLoadedError(Exception):
@@ -43,3 +44,32 @@ class TitanicData:
             print(f"{pronoun.capitalize()} survived.")
         else:
             print(f"{pronoun.capitalize()} did not survive.")
+
+    def get_adult_survivors(self):
+
+        return self._passenger_dataframe.query("age > 17 and survived=='Yes'")
+
+        # return self._passenger_dataframe.loc[
+        #     (self._passenger_dataframe["age"] >= 18)
+        #     & (self._passenger_dataframe["survived"] == "Yes")
+        # ]
+
+    def plot_age_hist(self):
+        self._passenger_dataframe["age"].plot.hist()
+        plt.show()
+
+    def plot_age_box(self):
+        self._passenger_dataframe["age"].plot.box()
+        plt.show()
+
+    def plot_sex_pie(self):
+        self._passenger_dataframe["sex"].value_counts().plot.pie()
+        plt.show()
+
+    def plot_num_siblings_spouses(self):
+        self._passenger_dataframe["sibsp"].value_counts().sort_index().plot.bar()
+        plt.show()
+
+# NEW task:
+# import in a nicer format:
+#   survived should be a boolean value
