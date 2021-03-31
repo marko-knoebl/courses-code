@@ -1,2 +1,2 @@
-from .vec2 import Vec2
-from .vec3 import Vec3
+from vec.vec2 import Vec2
+from vec.vec3 import Vec3
