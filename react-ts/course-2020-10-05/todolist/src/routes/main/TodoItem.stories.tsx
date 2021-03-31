@@ -1,12 +1,12 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 import TodoItem from "./TodoItem";
+
+const Template = (args) => <TodoItem {...args} />;
 
 export default {
   title: "TodoItem",
   component: TodoItem,
-  decorators: [withKnobs],
 };
 
 export const incompleteTodo = () => (

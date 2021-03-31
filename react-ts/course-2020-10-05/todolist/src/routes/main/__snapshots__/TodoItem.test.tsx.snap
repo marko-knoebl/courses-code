@@ -1,18 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches the snapshot 1`] = `
-<div>
-  <li
-    class="sc-bdnylx jhzCVK todoitem"
+<li
+  class="sc-bdnylx jhzCVK todoitem"
+>
+  TODO
+  : 
+  foo
+  <button
+    class="sc-gtssRu fdcDti"
   >
-    TODO
-    : 
-    foo
-    <button
-      class="sc-gtssRu fdcDti"
-    >
-      X
-    </button>
-  </li>
-</div>
+    X
+  </button>
+</li>
 `;

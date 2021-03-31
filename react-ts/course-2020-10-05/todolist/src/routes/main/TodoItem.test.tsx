@@ -1,9 +1,9 @@
 import React from "react";
 import TodoItem from "./TodoItem";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 it("matches the snapshot", () => {
-  const instance = render(
+  render(
     <TodoItem
       title="foo"
       completed={false}
@@ -11,5 +11,6 @@ it("matches the snapshot", () => {
       onDelete={() => {}}
     />
   );
-  expect(instance.container).toMatchSnapshot();
+  const li = screen.getByRole("listitem");
+  expect(li).toMatchSnapshot();
 });
