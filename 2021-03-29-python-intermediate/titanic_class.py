@@ -74,7 +74,3 @@ class TitanicData:
         self._passenger_dataframe["sibsp"].value_counts().sort_index().plot.bar()
         plt.show()
 
-
-# NEW task:
-# import in a nicer format:
-#   survived should be a boolean value
