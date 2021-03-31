@@ -21,9 +21,9 @@ print(len(lines))
 # create a list of new - modified - lines
 # start with an empty list and fill it via a loop
 new_lines = []
-i = 0
-for line in lines:
-    i += 1
+
+
+for (i, line) in enumerate(lines, 1):
     stripped_line = line.strip()
     # justified_line_with_numer = stripped_line.ljust(70) + " " + str(i)
     justified_line_with_numer = f"{stripped_line:<70}{i:>4}"
