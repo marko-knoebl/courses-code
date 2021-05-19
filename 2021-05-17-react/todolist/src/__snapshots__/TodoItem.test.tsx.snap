@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the snapshot 1`] = `
+<li
+  style="text-decoration: none; background-color: lightblue;"
+>
+  <input
+    type="checkbox"
+  />
+  todo: 
+  foo
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      delete
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      toggle
+    </span>
+    <span
+      class="MuiTouchRipple-root"
+    />
+  </button>
+</li>
+`;

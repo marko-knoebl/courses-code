@@ -1,0 +1,32 @@
+import puppeteer from "puppeteer";
+
+let browser: puppeteer.Browser;
+let page: puppeteer.Page;
+
+jest.setTimeout(15000);
+
+beforeAll(async () => {
+  browser = await puppeteer.launch();
+});
+beforeEach(async () => {
+  page = await browser.newPage();
+  await page.goto("https://en.wikipedia.org");
+});
+afterAll(async () => {
+  await browser.close();
+});
+
+test("wikipedia title", async () => {
+  const pageTitle = await page.title();
+  expect(pageTitle).toMatch(/Wikipedia/);
+});
+
+test("wikipedia search", async () => {
+  await page.click("#searchInput");
+  await page.keyboard.type("puppeteer");
+  await page.click("#searchButton");
+  await page.waitForNavigation();
+  const paragraphText = await page.$eval("p", (element) => element.textContent);
+  console.log(paragraphText);
+  expect(paragraphText).toMatch(/puppeteer/i);
+});

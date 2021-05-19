@@ -1,0 +1,19 @@
++ effect hook / Abfragen von APIs
+- Klassenkomponenten
+
+- React Router
+- Context: Mechanismus, um Werte von "weit oben" untergeordneten Komponenten zur Verfügung zu stellen
+- Eigene Hooks erstellen
+
++ App-Entwicklung
++ Authentifizierung
++ Datenbankanbindung / SQL (vielleicht mit next.js)
+
++ Tests
+
+- State Management mit Reducern -> Redux (komplexe / umfangreiche States verwalten)
+
+# weitere Themen
+
+- Tools für Styling
+- Tools für Formulare (Validierung)
