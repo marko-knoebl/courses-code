@@ -1,0 +1,8 @@
+.todo {
+  padding: 8px;
+  border: 2px solid lightblue;
+  &.completed {
+    text-decoration: line-through;
+    border: 2px solid lightgrey;
+  }
+}
