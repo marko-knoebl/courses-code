@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import { Container, Navbar } from "react-bootstrap";
 import { Route, Routes, useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
 import AddTodo from "./AddTodo";
+import { ThemeContext, useTheme } from "./ThemeContext";
 import TodoItem from "./TodoItem";
 import useTodos from "./useTodos";
 
@@ -10,9 +12,17 @@ function App() {
 
   const navigate = useNavigate();
 
+  // const themeObj = useContext(ThemeContext);
+  // if (themeObj === undefined) {
+  //   throw new Error("no provider for ThemeContext");
+  // }
+  // const { theme, changeTheme } = themeObj;
+
+  const { theme, changeTheme } = useTheme();
+
   return (
     <div className="App">
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg={theme} variant={theme === "light" ? "light" : "dark"}>
         <Container>
           <Navbar.Brand>Todo</Navbar.Brand>
         </Container>
@@ -20,6 +30,14 @@ function App() {
 
       <div>
         <button onClick={() => loadTodos()}>load todos from API</button>
+      </div>
+
+      <div>
+        <button
+          onClick={() => changeTheme(theme === "light" ? "dark" : "light")}
+        >
+          {theme === "light" ? "dark" : "light"}
+        </button>
       </div>
 
       <Container>

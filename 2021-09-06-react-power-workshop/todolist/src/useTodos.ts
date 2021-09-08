@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { fetchTodos } from "./todosApi";
+import todosReducer from "./todosReducer";
 
 import { Todo } from "./types";
 
@@ -10,31 +11,24 @@ const initialTodos: Array<Todo> = [
 ];
 
 function useTodos() {
-  const [todos, setTodos] = useState<Array<Todo>>(initialTodos);
+
+  const [todos, dispatch] = useReducer(todosReducer, initialTodos);
 
   function addTodo(title: string): void {
-    const maxId = Math.max(...todos.map((todo) => todo.id), 0);
-    const newTodos = [
-      ...todos,
-      { id: maxId + 1, title: title, completed: false },
-    ];
-    setTodos(newTodos);
+    // Auslösen einer Action
+    dispatch({ type: "addTodo", payload: title });
   }
 
   function setTodoStatus(id: number, completed: boolean) {
-    const newTodos = todos.map((todo) => {
-      if (todo.id === id) {
-        return { ...todo, completed: completed };
-      } else {
-        return todo;
-      }
-    });
-    setTodos(newTodos);
+    dispatch({ type: "setTodoStatus", payload: { id, completed } });
   }
 
   function deleteTodo(id: number): void {
-    const newTodos = todos.filter((todo) => todo.id !== id);
-    setTodos(newTodos);
+    dispatch({ type: "deleteTodo", payload: id });
+  }
+
+  function setTodos(todos: Array<Todo>): void {
+    dispatch({ type: "setTodos", payload: todos });
   }
 
   async function loadTodos() {
@@ -61,7 +55,7 @@ function useTodos() {
   //   loadTodos();
   // }, []);
 
-  return { todos, addTodo, setTodoStatus, deleteTodo, loadTodos };
+  return { todos: todos, addTodo, setTodoStatus, deleteTodo, loadTodos };
 }
 
 export default useTodos;

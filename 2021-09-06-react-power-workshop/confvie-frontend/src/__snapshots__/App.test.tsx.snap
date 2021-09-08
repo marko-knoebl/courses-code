@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the snapshot 1`] = `
+<div
+  class="App"
+  data-testid="app"
+>
+  <nav
+    class="navbar navbar-expand-lg navbar-dark bg-dark"
+  >
+    <h1>
+      Navbar
+    </h1>
+  </nav>
+  <input
+    class="search form-control"
+    placeholder="Name"
+    type="search"
+  />
+  <table
+    class="table table-stripe table-border"
+  >
+    <thead>
+      <tr>
+        <th />
+        <th>
+          Status
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          Address
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;

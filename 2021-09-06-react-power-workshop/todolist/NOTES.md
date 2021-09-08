@@ -3,14 +3,17 @@
 + side effects (api-abfragen, localstorage)
 + routing
 + eigene hooks
-- context
-- formulare (validierung)
-- state management
++ context
++ formulare (validierung)
++ state management
+
+- testen (unit-tests)
+- bestehendes Projekt (Dieter, Ralf)
 - styling tools
+
 - projekt-setup
 - internationalisierung
-- testen (unit-tests)
-- state management mit Redux (theorie)
+- Vertiefung: state management mit Redux
 
 # Codesandboxes
 
