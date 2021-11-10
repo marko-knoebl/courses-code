@@ -1,0 +1,7 @@
+.todo {
+  padding: 8px;
+}
+
+.todo.completed {
+  text-decoration: line-through;
+}

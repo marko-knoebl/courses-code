@@ -1,3 +1,5 @@
 - Slideshow: https://codesandbox.io/s/gifted-tesla-4yyt2
 - Registrierungs-Formular: https://codesandbox.io/s/focused-stallman-pkf4e
 - "Immutable Data": https://codesandbox.io/s/goofy-wozniak-cj42u
+- Rating-Komponente: https://codesandbox.io/s/nostalgic-sanderson-1gk8j
+- Hacker News Search: https://codesandbox.io/s/heuristic-turing-5uqq0
