@@ -1,0 +1,18 @@
+- Pandas
+  - plotting
+    - Übung: pareto (Bevölkerung)
+  - multi-index
+  - joins
+  - gruppierung und aggregation
+    - jährliches maximum sp500
+  - zeitreihen
+- pyplot
+
+- supervised learning (überwachtes Lernen)
+  - Regression
+  - Klassifizierung
+  - neuronale Netze
+- data exploration / unsupervised learning
+  - lineare Regression
+  - Dimensionality reduction
+  - clustering
