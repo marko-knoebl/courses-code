@@ -1,0 +1,5 @@
+- Slideshow: https://codesandbox.io/s/determined-napier-p3tmu
+- Todo List: https://codesandbox.io/s/snowy-dream-ddzel
+- Immutable Data: https://codesandbox.io/s/frosty-rosalind-twj37?file=/src/immutableData.ts
+- Registration Form: https://codesandbox.io/s/wandering-wave-v3e30
+- Components (Rating, Button): https://codesandbox.io/s/jolly-mirzakhani-h4k68
