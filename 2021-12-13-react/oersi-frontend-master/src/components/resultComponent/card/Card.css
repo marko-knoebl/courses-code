@@ -1,0 +1,58 @@
+.card-card-root {
+  box-shadow: 9px 10px 20px -10px #3f4a4d !important;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-card-media {
+  height: 0;
+  padding-top: 56.25%;
+}
+
+/* Minimal height of all cards */
+.card-header-title {
+  min-height: 84px;
+}
+.card-infos {
+  min-height: 181px;
+}
+
+.card-header-title .MuiTypography-root {
+  text-align: center;
+  font-weight: 700;
+}
+
+.card-header-link {
+  color: #606668 !important;
+  font-weight: 700;
+}
+
+.card-description {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans",
+    "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  color: black;
+}
+
+.card-hide-overflow {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* overflow-wrap: anywhere; */
+}
+
+.card-line-clamp-one {
+  -webkit-line-clamp: 1;
+}
+.card-line-clamp-two {
+  -webkit-line-clamp: 2;
+}
+.card-line-clamp-four {
+  -webkit-line-clamp: 4;
+}
+.card-line-clamp-eight {
+  -webkit-line-clamp: 8;
+}

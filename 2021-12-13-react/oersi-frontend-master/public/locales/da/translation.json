@@ -1,0 +1,70 @@
+{
+    "CONTACT": {
+        "MAIL_LABEL": "E-Mail",
+        "MESSAGE_LABEL": "Besked",
+        "READ_PRIVACY_POLICY": "Jeg har læst og forstået <0>meddelelsen om beskyttelse af personlige oplysninger</0>",
+        "SUBJECT_LABEL": "Emne",
+        "SUBMITTED_MESSAGE": "Mange tak for din anmodning! Vi vender tilbage til dig så hurtigt som muligt på den angivne e-mailadresse.",
+        "TITLE": "Kontakt",
+        "TOPIC_REPORT_RECORD": "Rapport rekord"
+    },
+    "COOKIE": {
+        "BUTTON_ACCEPT": "Accepter",
+        "MORE_INFO": "Mere info",
+        "TITLE": "Dette websted bruger cookies for at give dig den bedst mulige oplevelse på vores websted. Ved at bruge dette websted giver du dit samtykke til denne brug."
+    },
+    "EMBED_MATERIAL": {
+        "BY": "af",
+        "CODE": "Kode",
+        "EMBED":"Indlejr",
+        "PREVIEW": "Forhåndsvisning",
+        "DIALOG_TITLE": "Integrere materiale",
+        "UNDER": "under"
+    },
+    "FILTER": {
+        "CLEAR_ALL": "Nulstil filter",
+        "HIDE_FILTER": "Skjul filter",
+        "SHOW_FILTER": "Vis filter"
+    },
+    "HEADER": {
+        "CHANGE_LANGUAGE_ENGLISH": "English",
+        "CHANGE_LANGUAGE_GERMAN": "Deutsch",
+        "SUBTITLE": "Open Educational Resources Search Index",
+        "TITLE": "OERSI"
+    },
+    "LABEL": {
+        "ABOUT": "Emneområde",
+        "AUDIENCE": "Publikum",
+        "AUTHOR": "Forfatter",
+        "CLOSE": "Lukke",
+        "COPY": "Kopiere",
+        "COPY_DONE": "Kopieret",
+        "DESCRIPTION": "Beskrivelse",
+        "JSON": "Json-Metadata",
+        "KEYWORDS": "Nøgleord",
+        "LANGUAGE": "Sprog",
+        "LICENSE": "Licens",        
+        "N/A": "Ikke defineret",
+        "ORGANIZATION": "Institution",
+        "PROVIDER": "Udbyder",
+        "PUBLICATION_DATE": "Udgivelsesdato",
+        "RESOURCETYPE": "Type",
+        "SEARCH": "Søg",
+        "SHOW_DETAILS": "Vis detaljer",
+        "SUBJECT": "Emneområde",
+        "SUBMIT": "Indsend",
+        "TO_MATERIAL": "Til materialet"
+    },
+    "META": {
+        "DESCRIPTION": "The Open Educational Resources Search Index (OERSI) provides a central point for searching for open educational resources in higher education by bringing together the content of distributed OER repositories and other sources of open educational resources.",
+        "TITLE": "Open Educational Resources Search Index"
+    },
+    "RESULT_LIST": {
+        "SORT_BY": "Sorter efter",
+        "SHOW_RESULT_STATS": "{{total}} resultater",
+        "SHOW_TOTAL": "{{rangeStart}}-{{rangeEnd}} ud af {{total}} rekords"
+    },
+    "SEARCH_COMPONENT": {
+        "PLACEHOLDER": "Søg..."
+    }
+}

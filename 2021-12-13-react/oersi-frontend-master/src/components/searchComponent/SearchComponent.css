@@ -1,0 +1,16 @@
+.search-component {
+  width: 40%;
+}
+
+svg.search-icon {
+  fill: #e86161 !important;
+  height: 1.8em;
+}
+
+/* Responsive styling */
+@media (max-width: 991.98px) {
+  .search-component {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}

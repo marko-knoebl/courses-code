@@ -1,0 +1,70 @@
+{
+    "CONTACT": {
+        "MAIL_LABEL": "E-Mail",
+        "MESSAGE_LABEL": "Message",
+        "READ_PRIVACY_POLICY": "I have read and accept the <0>Privacy Policy</0>",
+        "SUBJECT_LABEL": "Subject",
+        "SUBMITTED_MESSAGE": "Thank you for the request! We will get back to you as soon as possible at the provided email address.",
+        "TITLE": "Contact",
+        "TOPIC_REPORT_RECORD": "Report record"
+    },
+    "COOKIE": {
+        "BUTTON_ACCEPT": "Accept",
+        "MORE_INFO": "More Info",
+        "TITLE": "This website uses cookies to ensure you get the best experience on our website. By using this site, you agree to this use."
+    },
+    "EMBED_MATERIAL": {
+        "BY": "by",
+        "CODE": "Code",
+        "EMBED":"Embed",
+        "PREVIEW": "Preview",
+        "DIALOG_TITLE": "Embed Material",
+        "UNDER": "under"
+    },
+    "FILTER": {
+        "CLEAR_ALL": "Clear filters",
+        "HIDE_FILTER": "Hide filters",
+        "SHOW_FILTER": "Show filters"
+    },
+    "HEADER": {
+        "CHANGE_LANGUAGE_ENGLISH": "English",
+        "CHANGE_LANGUAGE_GERMAN": "Deutsch",
+        "SUBTITLE": "Open Educational Resources Search Index",
+        "TITLE": "OERSI"
+    },
+    "LABEL": {
+        "ABOUT": "Subject",
+        "AUDIENCE":  "Audience",
+        "AUTHOR": "Author",
+        "CLOSE": "Close",
+        "COPY": "Copy",
+        "COPY_DONE": "Copied",
+        "DESCRIPTION": "Description",
+        "JSON":"Json-Metadata",
+        "KEYWORDS":"Keyword",
+        "LANGUAGE": "Language",
+        "LICENSE": "License",
+        "N/A": "Undefined",
+        "ORGANIZATION":"Organization",
+        "PROVIDER": "Provider",
+        "PUBLICATION_DATE": "Publication Date",
+        "RESOURCETYPE": "Type",
+        "SEARCH":"Search",
+        "SHOW_DETAILS": "Show Details",
+        "SUBJECT": "Subject",
+        "SUBMIT":"Submit",
+        "TO_MATERIAL": "to material"
+    },
+    "META": {
+        "DESCRIPTION": "The Open Educational Resources Search Index (OERSI) provides a central point for searching for open educational resources in higher education by bringing together the content of distributed OER repositories and other sources of open educational resources.",
+        "TITLE": "Open Educational Resources Search Index"
+    },
+    "RESULT_LIST": {
+        "SORT_BY": "Sort by",
+        "SHOW_RESULT_STATS": "{{total}} results found",
+        "SHOW_TOTAL": "{{rangeStart}}-{{rangeEnd}} of {{total}} items"
+    },
+    "SEARCH_COMPONENT": {
+        "PLACEHOLDER": "Search..."
+    }
+}

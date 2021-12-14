@@ -1,0 +1,37 @@
+.sub-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.flex-direction-column {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* styling for left-sidebar */
+.left-bar {
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 50%;
+  color: #fff;
+  min-width: 200px;
+  max-width: 330px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.result-container {
+  width: 100%;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

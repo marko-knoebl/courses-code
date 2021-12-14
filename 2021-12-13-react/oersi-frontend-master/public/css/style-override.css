@@ -1,0 +1,26 @@
+/* Footer Style */
+
+.footer {
+  font-size: 15px !important;
+  background-color: white;
+  margin-top: 6%;
+  color: #606668;
+}
+.footer-block > h5 {
+  font-size: 1.2rem;
+}
+.footer-block > hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.footer-block > ul {
+  padding: 0;
+  list-style: none;
+}
+.footer-block a {
+  color: #606668;
+  display: inline-block;
+  width: 100%
+}
+.footer-block a:hover {
+  text-decoration: underline;
+}
