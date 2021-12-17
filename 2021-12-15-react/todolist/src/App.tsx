@@ -1,53 +1,10 @@
-// AddTodo-Komponente
-// TodoItem-Komponente
-
-import { useEffect, useState } from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
 import AddTodo from "./AddTodo";
 import TodoItem from "./TodoItem";
-import { fetchTodos } from "./todosApi";
-import { Todo } from "./types";
-
-const initialTodos: Array<Todo> = [
-  { id: 1, title: "foo", completed: false },
-  { id: 2, title: "bar", completed: true },
-];
+import useTodos from "./useTodos";
 
 export default function App() {
-  const [todos, setTodos] = useState<Array<Todo>>([]);
-
-  function addTodo(title: string): void {
-    let maxId = 0;
-    for (let todo of todos) {
-      maxId = Math.max(maxId, todo.id);
-    }
-    setTodos([...todos, { id: maxId + 1, title: title, completed: false }]);
-  }
-
-  function deleteTodo(id: number) {
-    setTodos(todos.filter((todo) => todo.id !== id));
-  }
-
-  function changeCompleted(id: number, completed: boolean) {
-    setTodos(
-      todos.map((todo) => {
-        if (todo.id === id) {
-          return { ...todo, completed: completed };
-        } else {
-          return todo;
-        }
-      })
-    );
-  }
-
-  async function loadTodos() {
-    const todos = await fetchTodos();
-    setTodos(todos);
-  }
-
-  useEffect(() => {
-    loadTodos();
-  }, []);
+  const { todos, addTodo, changeCompleted, deleteTodo, loadTodos } = useTodos();
 
   return (
     <div className="App">
@@ -84,6 +41,14 @@ export default function App() {
           }
         />
         <Route path="/about" element={<div>Todo App by Marko</div>} />
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />
       </Routes>
     </div>
   );

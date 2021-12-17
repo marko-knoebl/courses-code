@@ -1,20 +1,18 @@
-# Grundlagen-Themen
+# erledigt
 
-- TypeScript
-- Komponenten
-- Side Effects (z.B. Abfragen von APIs)
-- Routing
-
-# Themen
-
+- styling-Libraries
 - Hooks
   - eigene Hooks
   - externe Hooks
-- Context
-- styling-Libraries
+- Context: Theorie
+- Context: Praxis
 - Formulare (Libraries)
-- **Testen**
+
+# Themen
+
+- **Testen**: Praxis
 - State Management (Überblick)
   - evtl: Redux im Detail
-- next.js
 - Authentifizierung (Theorie)
+- next.js
+- Klassenkomponenten
