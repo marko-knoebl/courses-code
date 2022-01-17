@@ -1,0 +1,15 @@
+.filter-heading {
+  font-weight: bold;
+}
+
+.filter-item-label {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.filter-item-label-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,15 @@
+.ant-pagination {
+  text-align: center;
+  margin-top: 10px !important;
+  background-color: white;
+  box-shadow: 9px 10px 20px -10px #3f4a4d;
+  padding-bottom: 10px !important;
+}
+
+.ant-pagination-total-text {
+  display: list-item !important;
+}
+
+.result-stat-line {
+  display: flex;
+}

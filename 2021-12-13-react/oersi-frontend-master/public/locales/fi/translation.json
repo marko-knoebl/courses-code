@@ -1,0 +1,70 @@
+{
+    "CONTACT": {
+        "MAIL_LABEL": "Sähköposti",
+        "MESSAGE_LABEL": "Viesti",
+        "READ_PRIVACY_POLICY": "Olen lukenut ja hyväksyn <0>Tietosuojakäytäntö</0>",
+        "SUBJECT_LABEL": "Aihe",
+        "SUBMITTED_MESSAGE": "Kiitos pyynnöstä! Otamme sinuun yhteyttä mahdollisimman pian annetussa sähköpostiosoitteessa.",
+        "TITLE": "Ota yhteyttä",
+        "TOPIC_REPORT_RECORD": "Raporttitietue"
+    },
+    "COOKIE": {
+        "BUTTON_ACCEPT": "Hyväksy",
+        "MORE_INFO": "Lisätietoja",
+        "TITLE": "Tämä verkkosivusto käyttää evästeitä, jotta saat parhaan mahdollisen käyttökokemuksen verkkosivustollamme. Käyttämällä tätä sivustoa hyväksyt tämän käytön."
+    },
+    "EMBED_MATERIAL": {
+        "BY": "",
+        "CODE": "Koodi",
+        "EMBED":"Upota",
+        "PREVIEW": "Esikatselu",
+        "DIALOG_TITLE": "Upottaa materiaalin",
+        "UNDER": "lisenssillä"
+    },
+    "FILTER": {
+        "CLEAR_ALL": "Tyhjennä suodattimet",
+        "HIDE_FILTER": "Piilota suodattimet",
+        "SHOW_FILTER": "Näytä suodattimet"
+    },
+    "HEADER": {
+        "CHANGE_LANGUAGE_ENGLISH": "English",
+        "CHANGE_LANGUAGE_GERMAN": "Deutsch",
+        "SUBTITLE": "Open Educational Resources Search Index",
+        "TITLE": "OERSI"
+    },
+    "LABEL": {
+        "ABOUT": "Oppiaine, tieteenala",
+        "AUDIENCE": "Yleisö",
+        "AUTHOR": "Tekijä",
+        "CLOSE": "Sulje",
+        "COPY": "Kopioi",
+        "COPY_DONE": "Kopioitu",
+        "DESCRIPTION": "Kuvaus",
+        "JSON": "Json-Metatiedot",
+        "KEYWORDS": "Avainsanat",
+        "LANGUAGE": "Kieli",
+        "LICENSE": "Lisenssi",
+        "N/A": "Määrittelemätön",
+        "ORGANIZATION": "Organisaatio",
+        "PROVIDER": "Toimittaja",
+        "PUBLICATION_DATE": "Julkaisupäivä",
+        "RESOURCETYPE": "Oppimateriaalin tyyppi",
+        "SEARCH": "Hae",
+        "SHOW_DETAILS": "Näytä tiedot",
+        "SUBJECT": "Oppiaine, tieteenala",
+        "SUBMIT": "Lähetä",
+        "TO_MATERIAL": "Linkki materiaaliin"
+    },
+    "META": {
+        "DESCRIPTION": "The Open Educational Resources Search Index (OERSI) provides a central point for searching for open educational resources in higher education by bringing together the content of distributed OER repositories and other sources of open educational resources.",
+        "TITLE": "Open Educational Resources Search Index"
+    },
+    "RESULT_LIST": {
+        "SORT_BY": "Järjestä",
+        "SHOW_RESULT_STATS": "{{total}} tulosta",
+        "SHOW_TOTAL": "Näytetään {{rangeStart}}-{{rangeEnd}} / {{total}}"
+    },
+    "SEARCH_COMPONENT": {
+        "PLACEHOLDER": "Hakuehdot..."
+    }
+}

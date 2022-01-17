@@ -1,0 +1,11 @@
+.embed-dialog-textarea {
+  width: 100%;
+}
+.embed-dialog-tabpanel {
+  width: 100%;
+  min-height: 130px;
+}
+.embed-dialog-content-buttons {
+  display: flex;
+  justify-content: flex-end;
+}

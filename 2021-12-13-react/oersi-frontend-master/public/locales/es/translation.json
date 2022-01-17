@@ -1,0 +1,70 @@
+{
+    "CONTACT": {
+        "MAIL_LABEL": "E-Mail",
+        "MESSAGE_LABEL": "Mensaje",
+        "READ_PRIVACY_POLICY": "He leído y comprendido el <0>aviso de privacidad</0>",
+        "SUBJECT_LABEL": "Asunto",
+        "SUBMITTED_MESSAGE": "Muchas gracias por su solicitud. Nos pondremos en contacto con usted lo antes posible en la dirección de correo electrónico que nos ha facilitado.",
+        "TITLE": "Contacto",
+        "TOPIC_REPORT_RECORD": "informe de registro"
+    },
+    "COOKIE": {
+        "BUTTON_ACCEPT": "Aceptar",
+        "MORE_INFO": "Más información",
+        "TITLE": "Este sitio web utiliza cookies para ofrecerle la mejor experiencia posible en nuestro sitio web. Al utilizar este sitio web, usted acepta este uso."
+    },
+    "EMBED_MATERIAL": {
+        "BY": "de",
+        "CODE": "Código",
+        "EMBED":"Insertar",
+        "PREVIEW": "Vista Previa",
+        "DIALOG_TITLE": "Integrar el material",
+        "UNDER": "bajo"
+    },
+    "FILTER": {
+        "CLEAR_ALL": "Reiniciar filtros",
+        "HIDE_FILTER": "Ocultar filtros",
+        "SHOW_FILTER": "Mostrar filtros"
+    },
+    "HEADER": {
+        "CHANGE_LANGUAGE_ENGLISH": "English",
+        "CHANGE_LANGUAGE_GERMAN": "Deutsch",
+        "SUBTITLE": "Open Educational Resources Search Index",
+        "TITLE": "OERSI"
+    },
+    "LABEL": {
+        "ABOUT": "Tema",
+        "AUDIENCE": "Audiencia",
+        "AUTHOR": "Autor",
+        "CLOSE": "Cerrar",
+        "COPY": "Copiar",
+        "COPY_DONE": "Copiado",
+        "DESCRIPTION": "Descripción",
+        "JSON": "Json-Metadatos",
+        "KEYWORDS": "Palabra Clave",
+        "LANGUAGE": "Lengua",
+        "LICENSE": "Licencia",        
+        "N/A": "No definido",
+        "ORGANIZATION": "Institución",
+        "PROVIDER": "Proveedor",
+        "PUBLICATION_DATE": "Fecha de publicación",
+        "RESOURCETYPE": "Tipo",
+        "SEARCH": "Buscar",
+        "SHOW_DETAILS": "Mostrar detalles",
+        "SUBJECT": "Tema",
+        "SUBMIT": "Enviar",
+        "TO_MATERIAL": "Al material"
+    },
+    "META": {
+        "DESCRIPTION": "The Open Educational Resources Search Index (OERSI) provides a central point for searching for open educational resources in higher education by bringing together the content of distributed OER repositories and other sources of open educational resources.",
+        "TITLE": "Open Educational Resources Search Index"
+    },
+    "RESULT_LIST": {
+        "SORT_BY": "Ordenar por",
+        "SHOW_RESULT_STATS": "{{total}} resultados",
+        "SHOW_TOTAL": "{{rangeStart}}-{{rangeEnd}} de {{total}} entradas"
+    },
+    "SEARCH_COMPONENT": {
+        "PLACEHOLDER": "Busca..."
+    }
+}

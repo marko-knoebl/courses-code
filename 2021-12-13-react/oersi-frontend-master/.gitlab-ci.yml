@@ -1,0 +1,75 @@
+# https://hub.docker.com/r/library/node/tags/
+
+image: node:lts-bullseye
+
+# This folder is cached between builds
+# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
+
+#This declares the pipeline stages
+stages:
+  - test
+  - sonar
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+    
+install-dependencies:
+  stage: .pre
+  script: npm install
+
+run-unit-test:
+  stage: test
+  dependencies:
+    - install-dependencies
+  script: npm test -u
+
+create-test-coverage-report:
+  stage: test
+  dependencies:
+    - install-dependencies
+  script: npm run test:coverage
+  artifacts:
+    paths:
+      - coverage
+  only:
+    - merge_requests
+    - master
+
+include:
+  - local: ".gitlab-ci-sonar.yml"
+
+build:
+  stage: build
+  dependencies:
+    - install-dependencies
+  script:
+    - "PROJECTVERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\", ]//g')"
+    - "TIMESTAMP=$(date +'%Y%m%d%H%M%S')"
+    - '[[ "$PROJECTVERSION" == *-SNAPSHOT ]] && PROJECTVERSION=${PROJECTVERSION::-9}-${TIMESTAMP} && npm --no-git-tag-version version $PROJECTVERSION'
+    - echo VERSION=${PROJECTVERSION} > build.info
+    - echo BUILDNUMBER=${CI_JOB_ID} >> build.info
+    - echo COMMIT_SHA=${CI_COMMIT_SHORT_SHA} >> build.info
+    - echo TIMESTAMP=${TIMESTAMP} >> build.info
+    - cat build.info
+    - npm run build:prod
+  artifacts:
+    paths:
+      - build
+      - build.info
+  only:
+    - branches
+    - tags
+
+deploy release:
+  stage: deploy
+  dependencies:
+    - build
+  script:
+    - BUILDNUMBER=$(grep "BUILDNUMBER=" build.info | cut -d'=' -f2)
+    - 'wget -O frontend.zip ${CI_PROJECT_URL}/-/jobs/${BUILDNUMBER}/artifacts/download'
+    - 'curl --header "JOB-TOKEN: $CI_JOB_TOKEN" --upload-file frontend.zip "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/frontend/${CI_COMMIT_TAG}/frontend.zip"'
+  only:
+    - tags
