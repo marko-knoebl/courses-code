@@ -1,17 +1,27 @@
-Themen:
+# Themen
 
-- side effects (Abfragen von APIs)
-- Breakpoints
-- debugging
-- useRef
-- callback - was ist das?
-- React.Fragment
-- deployment
++ React.Fragment
++ callback - was ist das?
++ Build & Deployment
++ Debugging, Breakpoints
 
 ---
 
-- CSS
++ side effects (Abfragen von APIs)
++ useRef
+- closures
++ custom hooks (siehe RegistrationForm von Niklas)
++ context
++ styling (CSS-Klassen)
+
+---
+
 - tests
   - snapshot-tests vorhanden
   - Einführung
-- Redux-Einführung
+  - jest
+    - jest.fn
+  - enzyme
+- Redux Überblick
+- CSS
+- Praxis: hackernews-abfrage
