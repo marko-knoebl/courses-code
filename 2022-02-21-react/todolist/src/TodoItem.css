@@ -1,0 +1,8 @@
+.todo {
+  background-color: salmon;
+}
+
+.todo.completed {
+  background-color: lightgrey;
+  text-decoration: line-through;
+}
