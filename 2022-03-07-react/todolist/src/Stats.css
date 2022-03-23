@@ -1,0 +1,12 @@
+.number {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.number.completed {
+  color: green;
+}
+
+.number.incomplete {
+  color: red;
+}

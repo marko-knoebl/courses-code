@@ -1,0 +1,16 @@
+.todoitem {
+  margin: 8px;
+  padding: 8px;
+}
+
+.todoitem.incomplete {
+  background-color: lightblue;
+}
+
+.todoitem.completed {
+  background-color: lightgrey;
+}
+
+.todoitem.longtitle {
+  border: 2px solid orange;
+}

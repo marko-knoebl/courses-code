@@ -1,14 +1,14 @@
 # Themen
 
 x Sharepoint Framework / SPFX
-- Komponenten
-- Side Effects (API-Anfragen)
-- React Router
+x Komponenten
+x Side Effects (API-Anfragen)
+x React Router
 
-- Überblick über Testen in JavaScript
-- eigene Hooks
-- Context
-- react-query
+x eigene Hooks
+x react-query
+x Context
+x Überblick über Testen in JavaScript (Schnellübersicht)
 - (state management)
-- styling tools
+x styling tools
 - formulare

@@ -1,89 +1,59 @@
-import { Box, Button } from "@mui/material";
-import React, { useState } from "react";
-
-type Todo = {
-  id: number;
-  title: string;
-  completed: boolean;
-};
+import { NavLink, Route, Routes } from "react-router-dom";
+import AboutView from "./AboutView";
+import AddTodo from "./AddTodo";
+import Stats from "./Stats";
+import TodoItem from "./TodoItem";
+import { useTodos } from "./useTodos";
 
 function App() {
-  // functions that manage todos
-  const [todos, setTodos] = useState<Array<Todo>>([]);
+  const { todos, isLoading, addTodo, setTodoCompleted, removeTodo, loadTodos } =
+    useTodos();
 
-  function addTodo(title: string): void {
-    let maxId = 0;
-    for (let todo of todos) {
-      maxId = Math.max(maxId, todo.id);
+  // potential validation
+  let hasK = false;
+  for (let todo of todos) {
+    if (todo.title.includes("k")) {
+      hasK = true;
     }
-    setTodos([...todos, { id: maxId + 1, title: title, completed: false }]);
-  }
-  function setTodoCompleted(id: number, completed: boolean): void {
-    const newTodos = todos.map((todo) =>
-      todo.id === id ? { ...todo, completed: completed } : todo
-    );
-    setTodos(newTodos);
-  }
-  function removeTodo(id: number): void {
-    setTodos(todos.filter((todo) => todo.id !== id));
   }
 
-  // code that handles form UI
-  const [newTitle, setNewTitle] = useState<string>("");
-
-  function handleSubmit(event: React.FormEvent): void {
-    event.preventDefault();
-    addTodo(newTitle);
-    setNewTitle("");
+  if (hasK) {
+    return <div>No k allowed in titles</div>
   }
 
   return (
     <div>
       <h1>Todo</h1>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>
-            {/* flexbox - siehe https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */}
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <Box
-                sx={{
-                  width: 400,
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "baseline",
-                  backgroundColor: "lightblue",
-                }}
-              >
-                <div>
-                  <input
-                    type="checkbox"
-                    checked={todo.completed}
-                    onChange={(event) =>
-                      setTodoCompleted(todo.id, event.target.checked)
+      <NavLink to="/">home</NavLink> <NavLink to="/about">about</NavLink>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div>
+              <div>
+                <button onClick={() => loadTodos()}>load Todos from API</button>
+              </div>
+              {isLoading ? <div>loading ...</div> : null}
+              <Stats todos={todos} />
+              <ul>
+                {todos.map((todo) => (
+                  <TodoItem
+                    todo={todo}
+                    onDelete={(id) => removeTodo(id)}
+                    onChangeCompleted={(id, completed) =>
+                      setTodoCompleted(id, completed)
                     }
                   />
-                  {todo.completed ? "DONE" : "TODO"}: {todo.title}
-                </div>
-                <Button onClick={() => removeTodo(todo.id)} color="secondary">
-                  delete
-                </Button>
-              </Box>
-            </Box>
-          </li>
-        ))}
-      </ul>
-      <form onSubmit={(event) => handleSubmit(event)}>
-        <label>
-          new title:{" "}
-          <input
-            value={newTitle}
-            onChange={(event) => setNewTitle(event.target.value)}
-          />
-        </label>
-        <Button type="submit" variant="contained" color="secondary">
-          Add
-        </Button>
-      </form>
+                ))}
+              </ul>
+
+              <AddTodo onAdd={(newTitle) => addTodo(newTitle)} />
+              <Stats todos={todos} />
+            </div>
+          }
+        />
+        <Route path="/about" element={<AboutView />} />
+      </Routes>
     </div>
   );
 }
