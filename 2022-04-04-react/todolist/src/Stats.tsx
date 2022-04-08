@@ -1,11 +1,11 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { Todo } from "./types";
 
 interface StatsProps {
   todos: Array<Todo>;
 }
 
-class Stats extends Component<StatsProps> {
+class Stats extends PureComponent<StatsProps> {
   render() {
     const numTodos = this.props.todos.length;
     const numCompletedTodos = this.props.todos.filter(

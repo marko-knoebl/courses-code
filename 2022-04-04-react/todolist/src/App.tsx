@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { NavLink, Route, Routes } from "react-router-dom";
 import Stats from "./Stats";
 import TodoItem from "./TodoItem";
 import { fetchTodos } from "./todosApi";
@@ -61,36 +62,54 @@ class App extends Component<AppProps, AppState> {
   render() {
     return (
       <div className="App">
+        <NavLink to="/">home</NavLink> <NavLink to="/about">about</NavLink>
         <h1>Todo</h1>
-        <button onClick={this.loadTodos}>load todos from API</button>
-        <Stats todos={this.state.todos} />
-        <ul>
-          {this.state.todos.map((todo) => (
-            <TodoItem
-              todo={todo}
-              onRemoveTodo={this.removeTodo}
-              onChangeTodoCompleted={(id, completed) =>
-                this.setTodoCompleted(id, completed)
-              }
-            />
-          ))}
-        </ul>
-        <form
-          onSubmit={(event) => {
-            event.preventDefault();
-            this.addTodo(this.state.newTitle);
-            this.setState({ newTitle: "" });
-          }}
-        >
-          title:{" "}
-          <input
-            value={this.state.newTitle}
-            onChange={(event) =>
-              this.setState({ newTitle: event.target.value })
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div>
+                <button onClick={this.loadTodos}>load todos from API</button>
+                <Stats todos={this.state.todos} />
+                <ul>
+                  {this.state.todos.map((todo) => (
+                    <TodoItem
+                      todo={todo}
+                      onRemoveTodo={this.removeTodo}
+                      onChangeTodoCompleted={(id, completed) =>
+                        this.setTodoCompleted(id, completed)
+                      }
+                    />
+                  ))}
+                </ul>
+                <form
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    this.addTodo(this.state.newTitle);
+                    this.setState({ newTitle: "" });
+                  }}
+                >
+                  title:{" "}
+                  <input
+                    value={this.state.newTitle}
+                    onChange={(event) =>
+                      this.setState({ newTitle: event.target.value })
+                    }
+                  />
+                  <button>add</button>
+                </form>
+              </div>
             }
           />
-          <button>add</button>
-        </form>
+          <Route
+            path="/about"
+            element={
+              <div>
+                Todo Application by <i>Marko</i>
+              </div>
+            }
+          />
+        </Routes>
       </div>
     );
   }

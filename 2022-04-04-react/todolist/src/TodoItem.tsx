@@ -1,6 +1,8 @@
 import { Component } from "react";
 import { Todo } from "./types";
 
+import styles from "./TodoItem.module.css";
+
 interface TodoItemProps {
   todo: Todo;
   onRemoveTodo: (id: number) => void;
@@ -9,8 +11,18 @@ interface TodoItemProps {
 
 class TodoItem extends Component<TodoItemProps> {
   render() {
+    if (Math.random() < 0.001) {
+      throw new Error("oops");
+    }
     return (
-      <li key={this.props.todo.id}>
+      <li
+        key={this.props.todo.id}
+        className={
+          this.props.todo.completed
+            ? styles.todoItem + " " + styles.completed
+            : styles.todoItem
+        }
+      >
         <input
           type="checkbox"
           checked={this.props.todo.completed}
