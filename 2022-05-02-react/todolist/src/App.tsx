@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Todo } from "./types";
 import "./App.css";
-import { Button } from "@mui/material";
 import Statistics from "./Statistics";
 import AddTodo from "./AddTodo";
 import TodoItem from "./TodoItem";

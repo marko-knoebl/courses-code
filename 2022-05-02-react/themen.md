@@ -7,7 +7,8 @@ x API-Anfragen & Side effects
 x Styling-Tools
 x Formular-Libraries
 x State Management (Redux)
-- (Server-Side Rendering)
-- Refs
-- Authentifizierung
+x (Server-Side Rendering)
+x Refs
+x Authentifizierung
 - Tests
+- webpack / babel

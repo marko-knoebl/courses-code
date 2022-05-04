@@ -13,7 +13,7 @@ async function fetchTodos(): Promise<Array<Todo>> {
     title: todo.title,
     completed: todo.completed,
   }));
-  return todos;
+  return todos.slice(0, 5);
 }
 
 export { fetchTodos };

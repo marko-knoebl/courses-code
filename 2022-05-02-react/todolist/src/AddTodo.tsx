@@ -2,7 +2,7 @@
 // props:
 // events: onAdd
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type AddTodoProps = {
   onAdd: (title: string) => void;
@@ -10,6 +10,13 @@ type AddTodoProps = {
 
 function AddTodo(props: AddTodoProps) {
   const [newTitle, setNewTitle] = useState("");
+
+  const inputRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    // setze fokus auf das input-Element
+    inputRef.current?.focus();
+  }, []);
+
   return (
     <form
       onSubmit={(event) => {
@@ -22,6 +29,7 @@ function AddTodo(props: AddTodoProps) {
         type="text"
         value={newTitle}
         onChange={(event) => setNewTitle(event.target.value)}
+        ref={inputRef}
       />
       <button type="submit">add</button>
     </form>
