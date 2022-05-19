@@ -1,3 +1,7 @@
+import os
+
+os.remove("shoppinglist.txt")
+
 shopping_list = []
 
 print('enter an item or "x" to quit:')
@@ -13,5 +17,10 @@ while item != "x":
 
 print("list is completed")
 
+file = open("shoppinglist.txt", "w", encoding="utf-8")
+
 for shopping_item in shopping_list:
     print("-" + shopping_item)
+    file.write("-" + shopping_item + "\n")
+
+file.close()
