@@ -8,17 +8,18 @@
   x builtins and the standard library
   x control structures: if / else, loops
   x functions
-  - code quality and linting
-  - debugging
   - data types in depth: strings, bytes, sequences
   - object-oriented programming and classes
+  - code quality and linting
+  - debugging
 - Python in practice
-  - working with files and folders
-  - working with various file formats (text, JSON, CSV, XML, ...)
-  - Jupyter and IPython
-  - numerical computations with NumPy
+  x working with files and folders
+  x working with various file formats (text, JSON, CSV, XML, ...)
+  x Jupyter and IPython
+  x numerical computations with NumPy
   - data visualization with pyplot
-  - data analysis with pandas
-  - ? graphical user interfaces
+  x data analysis with pandas
+  x ? graphical user interfaces
   - ? machine learning basics
   - ? 3d plots  (Adrian)
+  - ? integration / differentiation (Ahmed)
