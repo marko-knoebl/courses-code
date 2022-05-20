@@ -29,6 +29,5 @@ def gtin_check_digit(gtin_without_check_digit):
     result = 10 - remainder
     return result
 
-
-print(gtin_check_digit("211025400322")) # last digit: 6
+print(gtin_check_digit)
 print(gtin_check_digit("501025505020")) # last digit: 5
