@@ -3,7 +3,7 @@
 
 file_input = open("demo_files/demo.dat", "r", encoding="utf-8")
 
-file_output = open("demo_files/demo_extracted.dat")
+file_output = open("demo_files/demo_extracted.dat", "w", encoding="utf-8")
 
 # "before_data", "data", "after_data"
 current_section = "before_data"
@@ -21,6 +21,7 @@ for line in file_input:
             current_section = "after_data"
         else:
             print(line, end="")
+            file_output.write(line)
     else:
         pass
         # data has ended
