@@ -6,17 +6,16 @@
 - control structures
 - branching and loops
 - functions
-
-- exception handling
 - python libraries
 - standard library
-
 - libraries for importing / exporting data
-- libraries for data processing: numpy, pandas
 - import / export
 - text files / XML files / JSON files
 - creating modules and packages
+- introduction to Jupyter notebooks
+
+- libraries for data processing: numpy, pandas
+- exception handling
 - overview of:
   - git workflow (in practice)
   - managing environments with anaconda
-  - introduction to Jupyter notebooks
