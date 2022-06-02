@@ -16,8 +16,8 @@
 - numpy
 - pandas
 - pyplot
-
 - exception handling
+- managing environments with anaconda
+
 - overview of:
   - git workflow (in practice)
-  - managing environments with anaconda
