@@ -13,9 +13,9 @@
 - text files / XML files / JSON files
 - creating modules and packages
 - introduction to Jupyter notebooks
+- numpy
 
 - libraries for data processing:
-  - numpy
   - pandas
   - pyplot
 - exception handling
