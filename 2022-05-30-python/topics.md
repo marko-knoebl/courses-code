@@ -14,10 +14,9 @@
 - creating modules and packages
 - introduction to Jupyter notebooks
 - numpy
+- pandas
+- pyplot
 
-- libraries for data processing:
-  - pandas
-  - pyplot
 - exception handling
 - overview of:
   - git workflow (in practice)
