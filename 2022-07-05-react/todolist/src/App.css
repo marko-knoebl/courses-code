@@ -1,0 +1,14 @@
+.todo {
+  padding: 8px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.todo.completed {
+  background-color: #ddd;
+  text-decoration: line-through;
+}
+
+.todo.completed:hover {
+  background-color: #eee;
+}
