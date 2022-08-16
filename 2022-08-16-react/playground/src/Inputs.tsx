@@ -1,16 +1,16 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 export default function Inputs() {
-  const [enableTextInput, setEnableTextInput] = useState(true);
+  const [enableTextInput, setEnableTextInput] = useState<boolean>(true);
   const [myText, setMyText] = useState("foo");
 
+  const handleSubmit = (event: FormEvent): void => {
+    event.preventDefault();
+    alert("form submit");
+  };
+
   return (
-    <form
-      onSubmit={(event) => {
-        event.preventDefault();
-        alert("form submit");
-      }}
-    >
+    <form onSubmit={handleSubmit}>
       <em>fooasdfasd sa asdfsadfsaf asdfasdf asd asdfasdfa asdfasdf asdf</em>{" "}
       <strong>bar</strong>
       <div>

@@ -2,24 +2,30 @@ import { useState } from "react";
 
 import "./Slideshow.css";
 
-function Slideshow() {
-  const [imgId, setImgId] = useState(0);
-  // abgeleiteter Wert
-  const imgUrl = "https://picsum.photos/300/200?image=" + imgId;
+function randInt(max: number): number {
+  return Math.floor(Math.random() * max);
+}
 
-  const nextThumbnailUrl = "https://picsum.photos/60/40?image=" + (imgId + 1);
-  const previousThumbnailUrl =
+function Slideshow() {
+  const [imgId, setImgId] = useState<number>(0);
+
+  // abgeleiteter Wert
+  const imgUrl: string = "https://picsum.photos/300/200?image=" + imgId;
+
+  const nextThumbnailUrl: string =
+    "https://picsum.photos/60/40?image=" + (imgId + 1);
+  const previousThumbnailUrl: string =
     "https://picsum.photos/60/40?image=" + (imgId - 1);
 
-  function goToPreviousImg() {
+  function goToPreviousImg(): void {
     if (imgId !== 0) {
       setImgId(imgId - 1);
     }
   }
 
-  function goToRandomImg() {
+  function goToRandomImg(): void {
     // go to random image (0 - 99)
-    setImgId(Math.floor(Math.random() * 100));
+    setImgId(randInt(100));
   }
 
   // generate an array of up to 5 preview ids

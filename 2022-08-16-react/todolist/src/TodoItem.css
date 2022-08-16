@@ -1,0 +1,13 @@
+.TodoItem {
+  margin: 8px;
+  padding: 8px;
+  background-color: lightcoral;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.TodoItem--Completed {
+  text-decoration: line-through;
+  background-color: lightgrey;
+}
