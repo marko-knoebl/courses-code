@@ -22,24 +22,30 @@
   - Libraries (z.B. react-query)
 - Effect-Hook
 
-- Routing
+## Tag 3
+
 - Performanceoptimierung
-- Context
+- manuelle Projekteinrichtung und Ordnerstruktur
 - Überblick über State-Management
 - Tests
   - Allgemeines Testen (Jest) und Cypress (E2E)
   - React-Testing-Library
-- Praxisbeispiele (Todo-Liste, Wechselkurse mit API-Abfragen, ...)
 - Styling-Tools
   - SASS
-- (Formulare und Validierung)
-
-# Vertiefung
-
+- eigene Hooks
+- Routing (inkl. Praxis)
 - Refs
   - Verwaltung von Fokus, ...
   - Integration anderer JS-Libraries
-- State Management
-  - mobx
-  - Redux
+
+### Praxisbeispiele
+
+- Komponenten (z.B. `TodoList`, `AddTodo`)
+- API-Abfragen (Todos, Wechselkurse)
+- eigene Hooks (z.B. `useDidMountEffect`, `useExchangeRate`)
+- (Context)
+
+# Vertiefung
+
+- Formulare und Validierung
 - Authentifizierung

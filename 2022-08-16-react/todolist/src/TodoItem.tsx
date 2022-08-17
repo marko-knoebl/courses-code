@@ -1,6 +1,7 @@
 import { Todo } from "./types";
 
 import "./TodoItem.css";
+import { memo } from "react";
 
 type Props = {
   todo: Todo;
@@ -29,4 +30,4 @@ function TodoItem(props: Props) {
   );
 }
 
-export default TodoItem;
+export default memo(TodoItem);

@@ -3,12 +3,16 @@ import { useEffect, useState } from "react";
 export default function Counter() {
   const [count, setCount] = useState(0);
   function startCounting() {
-    setInterval(() => {
+    const intervalId = setInterval(() => {
       setCount((c) => c + 1);
     }, 1000);
+    return intervalId;
   }
 
-  useEffect(startCounting, []);
+  useEffect(() => {
+    const intervalId = startCounting();
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div>
