@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .box {
+        border: 2px solid black;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+    <div class="box" draggable="true" ondragend="handleDragEnd(event)">0</div>
+    <div
+      class="box"
+      ondragenter="handleDragEnter(event)"
+      ondragover="handleDragOver(event)"
+      ondrop="handleDrop(event)"
+    >
+      drag target
+    </div>
+    <script>
+      function handleDragEnd(event) {
+        event.target.innerHTML = Number(event.target.innerHTML) + 1;
+      }
+      function handleDragEnter(event) {
+        event.preventDefault();
+      }
+      function handleDragOver(event) {
+        event.preventDefault();
+      }
+      function handleDrop(event) {
+        event.preventDefault();
+        event.target.innerText += " drop ";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .divider {
+        display: flex;
+        flex-direction: row;
+      }
+      .basket-left {
+        flex-basis: 50%;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .product {
+        height: 40px;
+        width: 60px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .basket-right {
+        flex-basis: 50%;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <div class="divider">
+      <div class="basket-left">
+        <div class="product" id="product-water">water</div>
+        <div class="product" id="product-milk">milk</div>
+        <div class="product" id="product-bread">bread</div>
+      </div>
+      <div class="basket-right"></div>
+    </div>
+    <script>
+      const basketQuantities = {
+        water: 0,
+        milk: 0,
+        bread: 0,
+      };
+
+      const products = document.querySelectorAll(".product");
+      for (let product of products) {
+        product.draggable = "true";
+        product.addEventListener("dragstart", (event) => {
+          event.dataTransfer.setData("text/plain", product.innerText);
+        });
+      }
+
+      for (let side of ["left", "right"]) {
+        const basket = document.querySelector(`.basket-${side}`);
+        basket.addEventListener("dragenter", (event) => {
+          event.preventDefault();
+        });
+        basket.addEventListener("dragover", (event) => {
+          event.preventDefault();
+        });
+        basket.addEventListener("drop", (event) => {
+          event.preventDefault();
+          const productType = event.dataTransfer.getData("text/plain");
+          const productElement = document.getElementById(
+            `product-${productType}`
+          );
+          basket.appendChild(productElement);
+        });
+      }
+    </script>
+  </body>
+</html>

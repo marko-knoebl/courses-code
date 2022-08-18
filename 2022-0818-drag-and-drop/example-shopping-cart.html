@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .divider {
+        display: flex;
+        flex-direction: row;
+      }
+      .products-list {
+        display: flex;
+        flex-basis: 50%;
+        flex-direction: column;
+      }
+      .product {
+        height: 40px;
+        width: 60px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .basket {
+        flex-basis: 50%;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <div class="divider">
+      <div class="products-list">
+        <div class="product" draggable="true">water</div>
+        <div class="product">milk</div>
+        <div class="product">bread</div>
+      </div>
+      <div class="basket">your basket is empty</div>
+    </div>
+    <script>
+      const basketQuantities = {
+        water: 0,
+        milk: 0,
+        bread: 0,
+      };
+
+      const products = document.querySelectorAll(".product");
+      for (let product of products) {
+        product.draggable = "true";
+        product.addEventListener("dragstart", (event) => {
+          event.dataTransfer.setData("text/plain", product.innerText);
+        });
+      }
+
+      const basket = document.querySelector(".basket");
+      basket.addEventListener("dragover", (event) => {
+        event.preventDefault();
+      });
+      basket.addEventListener("drop", (event) => {
+        event.preventDefault();
+        const productType = event.dataTransfer.getData("text/plain");
+        basketQuantities[productType]++;
+        updateBasketText();
+      });
+
+      function updateBasketText() {
+        basket.innerText = `
+          water: ${basketQuantities.water},
+          milk: ${basketQuantities.milk},
+          bread: ${basketQuantities.bread}
+        `;
+      }
+    </script>
+  </body>
+</html>

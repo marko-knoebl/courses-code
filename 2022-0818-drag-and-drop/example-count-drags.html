@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .draggable {
+        width: 60px;
+        height: 60px;
+        border: 2px solid black;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <div class="draggable">0</div>
+    <div class="draggable">0</div>
+    <div class="draggable">0</div>
+    <script>
+      const draggables = document.querySelectorAll(".draggable");
+      for (let draggable of draggables) {
+        draggable.draggable = "true";
+        draggable.addEventListener("dragend", () => {
+          draggable.innerText = Number(draggable.innerText) + 1;
+        });
+      }
+    </script>
+  </body>
+</html>
