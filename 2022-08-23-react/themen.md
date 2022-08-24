@@ -24,16 +24,18 @@
 
 - ~~Testen~~
 - ~~Nachtrag: Debugging in VS Code~~
-- Übung: Testen mit Cypress
 - Übung:
-  - ~~weitere Komponenten in der Todo-App~~
-  - zusätzliche Funktionen
+  - weitere Komponenten in der Todo-App
+  - zusätzliche Funktionen in der Todo-App
+  - Styling in der Todo-App
 - Übung: react-query
+- Übung: Context
+- Übung: Testen mit Cypress
 
 - ~~Styling-Werkzeuge~~
 - ~~Formulare~~
 - ~~Side Effects~~
-- Context
+- ~~Context~~
 - ~~Pre-Rendering mit next.js~~
 
 # Vertiefung 3
