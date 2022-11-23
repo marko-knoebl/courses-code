@@ -22,11 +22,13 @@ export default function AddTodo(props: AddTodoProps) {
         // addTodo(newTitle);
       }}
     >
-      title:
-      <input
-        value={newTitle}
-        onChange={(event) => setNewTitle(event.target.value)}
-      />
+      <label>
+        title
+        <input
+          value={newTitle}
+          onChange={(event) => setNewTitle(event.target.value)}
+        />
+      </label>
       <button type="submit">add</button>
     </form>
   );

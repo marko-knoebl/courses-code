@@ -12,6 +12,7 @@ export default function App() {
       <div>
         <button onClick={todoData.loadFromApi}>load data from API</button>
       </div>
+      {todoData.loadingState === "loading" && <div>loading...</div>}
       <TodoList
         todos={todoData.todos}
         onChangeCompleted={todoData.setTodoCompleted}

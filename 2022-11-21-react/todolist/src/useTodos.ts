@@ -1,36 +1,49 @@
-import { useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { fetchTodos } from "./todosApi";
-import { Todo } from "./types";
+import { todosReducer } from "./todosReducer";
 
 export default function useTodos() {
-  const [todos, setTodos] = useState<Array<Todo>>([
+  // const [todos, setTodos] = useState<Array<Todo>>([
+  //   { id: 1, title: "foo", completed: false },
+  //   { id: 2, title: "bar", completed: true },
+  // ]);
+  const [todos, dispatch] = useReducer(todosReducer, [
     { id: 1, title: "foo", completed: false },
     { id: 2, title: "bar", completed: true },
   ]);
 
+  // "idle" | "loading" | "success" | "error"
+  const [loadingState, setLoadingState] = useState("idle");
+
+  useEffect(() => {
+    loadFromApi();
+  }, []);
+
   async function loadFromApi() {
-    const todosFromApi = await fetchTodos();
-    setTodos(todosFromApi);
+    setLoadingState("loading");
+    let todosFromApi;
+    try {
+      todosFromApi = await fetchTodos();
+      dispatch({ type: "setTodos", payload: todosFromApi });
+      setLoadingState("success");
+    } catch {
+      setLoadingState("error");
+    }
   }
 
   function addTodo(title: string) {
-    let maxId = 0;
-    for (let todo of todos) {
-      maxId = Math.max(maxId, todo.id);
-    }
-    setTodos([...todos, { id: maxId + 1, title: title, completed: false }]);
+    dispatch({ type: "addTodo", payload: title });
   }
 
   function setTodoCompleted(id: number, completed: boolean) {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, completed: completed } : todo
-      )
-    );
+    dispatch({
+      type: "setTodoCompleted",
+      payload: { id: id, completed: completed },
+    });
   }
 
   function deleteTodo(id: number) {
-    setTodos(todos.filter((todo) => todo.id !== id));
+    dispatch({ type: "deleteTodo", payload: id });
   }
 
   return {
@@ -39,5 +52,6 @@ export default function useTodos() {
     setTodoCompleted: setTodoCompleted,
     deleteTodo: deleteTodo,
     loadFromApi: loadFromApi,
+    loadingState: loadingState,
   };
 }
