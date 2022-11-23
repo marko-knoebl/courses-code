@@ -1,0 +1,2 @@
+- slideshow, inputs: https://codesandbox.io/s/slideshow-forked-39ltii?file=/src/Slideshow.js
+- todo list: https://codesandbox.io/s/sad-allen-i7itcp?file=/src/App.tsx
