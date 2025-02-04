@@ -11,3 +11,4 @@ The original file is stored under data/penguins.csv
 - README.md : this file - basic information about this project
 - notebooks/ : interactive Jupyter notebooks
 - data/ : data/csv files
+- .gitignore : files / patterns that should be ignored by git
