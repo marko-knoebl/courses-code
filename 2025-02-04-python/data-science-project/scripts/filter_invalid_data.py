@@ -7,6 +7,14 @@ import pandas as pd
 
 from src.filter_out_nas import filter_out_nas
 
+import logging
+
+logging.basicConfig(
+    filename="filter_out_nas.log",
+    level=logging.DEBUG,
+    filemode="w"
+)
+
 # reading data
 
 data = pd.read_csv("data/penguins.csv")

@@ -1,0 +1,19 @@
+DEBUG:root:starting filter_out_nas
+DEBUG:root:removing invalid entry
+DEBUG:root:species                 Adelie
+island               Torgersen
+bill_length_mm             NaN
+bill_depth_mm              NaN
+flipper_length_mm          NaN
+body_mass_g                NaN
+sex                        NaN
+Name: 3, dtype: object
+DEBUG:root:removing invalid entry
+DEBUG:root:species              Gentoo
+island               Biscoe
+bill_length_mm          NaN
+bill_depth_mm           NaN
+flipper_length_mm       NaN
+body_mass_g             NaN
+sex                     NaN
+Name: 339, dtype: object

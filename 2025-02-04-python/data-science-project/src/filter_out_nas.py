@@ -1,4 +1,5 @@
 import pandas as pd
+import logging
 
 """
 contains only one function: filter_out_nas
@@ -23,6 +24,7 @@ def filter_out_nas(data):
 
     # use .iterrows to get the index and row for every entry
     # the index can be ignored - it is not used
+    logging.debug("starting filter_out_nas")
     for index, row in data.iterrows():
         if not (
             pd.isna(row["bill_length_mm"])
@@ -31,6 +33,10 @@ def filter_out_nas(data):
             or pd.isna(row["body_mass_g"])
         ):
             valid_list.append(row)
+        else:
+            logging.debug("removing invalid entry")
+            logging.debug(row)
+
 
     valid_df = pd.DataFrame(valid_list)
     return valid_df
