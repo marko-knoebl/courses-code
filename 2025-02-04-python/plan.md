@@ -38,3 +38,4 @@
   - overview of types (supervised, unsupervised, reinforcement)
   - neural networks: basic principles
   - neural networks: implementation with keras
+- creating and sharing packages
