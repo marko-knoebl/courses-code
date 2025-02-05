@@ -11,5 +11,7 @@ The original file is stored under data/penguins.csv
 - README.md : this file - basic information about this project
 - notebooks/ : interactive Jupyter notebooks
 - data/ : data/csv files
+- scripts/ : Python scripts for specific tasks - (e.g. creating a new filtered CSV file / creating plot images as pngs / training a ML model)
+- src/ : function for data processing ...
 - .gitignore : files / patterns that should be ignored by git
 - requirements.txt : dependency list
