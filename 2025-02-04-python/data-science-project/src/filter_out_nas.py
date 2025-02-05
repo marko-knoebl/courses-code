@@ -1,5 +1,10 @@
 import pandas as pd
 
+"""
+contains only one function: filter_out_nas
+"""
+
+
 def filter_out_nas(data):
     """
     remove rows of a penguin dataframe that contains missing data
@@ -11,10 +16,8 @@ def filter_out_nas(data):
     """
     # ^ this is a docstring - it is documentation for users of this function
 
-
     # this code is not clean / ideal!
     # good code would do this in just one line via isna() / dropna()
-
 
     valid_list = []
 
