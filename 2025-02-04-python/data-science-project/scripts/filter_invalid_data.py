@@ -3,9 +3,6 @@
 # bill_lenght, bill_depth, flipper_length, body_mass
 # save to a new file: penguins_filtered.csv
 
-# this code is not clean / ideal!
-# good code would do this in just one line via isna() / dropna()
-
 import pandas as pd
 
 from src.filter_out_nas import filter_out_nas

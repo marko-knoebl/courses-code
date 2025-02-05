@@ -11,6 +11,11 @@ def filter_out_nas(data):
     """
     # ^ this is a docstring - it is documentation for users of this function
 
+
+    # this code is not clean / ideal!
+    # good code would do this in just one line via isna() / dropna()
+
+
     valid_list = []
 
     # use .iterrows to get the index and row for every entry
