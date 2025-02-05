@@ -8,19 +8,16 @@
 
 import pandas as pd
 
+from src.filter_out_nas import filter_out_nas
+
+# reading data
+
 data = pd.read_csv("data/penguins.csv")
 
-valid_list = []
+# filtering data
 
-for index, row in data.iterrows():
-    if not (
-        pd.isna(row["bill_length_mm"])
-        or pd.isna(row["bill_depth_mm"])
-        or pd.isna(row["flipper_length_mm"])
-        or pd.isna(row["body_mass_g"])
-    ):
-        valid_list.append(row)
+valid_df = filter_out_nas(data)
 
-valid_df = pd.DataFrame(valid_list)
+# writing data
 
 valid_df.to_csv("data/penguins_filtered.csv")
