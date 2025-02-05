@@ -12,4 +12,4 @@ The original file is stored under data/penguins.csv
 - notebooks/ : interactive Jupyter notebooks
 - data/ : data/csv files
 - .gitignore : files / patterns that should be ignored by git
-- pyproject.toml : project config file with dependency list
+- requirements.txt : dependency list

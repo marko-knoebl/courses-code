@@ -1,7 +1,0 @@
-[project]
-name = "data-science-project"
-version = "1.0"
-dependencies = [
-  "pandas~=2.2",
-  "jupyter~=1.1"
-]
