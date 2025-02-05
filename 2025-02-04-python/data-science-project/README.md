@@ -15,3 +15,11 @@ The original file is stored under data/penguins.csv
 - src/ : function for data processing ...
 - .gitignore : files / patterns that should be ignored by git
 - requirements.txt : dependency list
+
+## Scripts
+
+filtering invalid data:
+
+```
+python -m scripts.filter_invalid_data
+```
