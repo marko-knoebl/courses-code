@@ -24,9 +24,11 @@
   - working with missing data
   - joining data sources
   - data visualization with various diagram types
+- GitHub / GitLab
 
 # day 3
 
+- notebooks and imports
 - classes and object-oriented programming
   - basics
   - inheritance and composition
@@ -38,4 +40,12 @@
   - overview of types (supervised, unsupervised, reinforcement)
   - neural networks: basic principles
   - neural networks: implementation with keras
+  - data exploration and regression
+
 - creating and sharing packages
+
+- creating graphical user interfaces
+- interactive plotting (like in plotly)
+- https://matplotlib.org/stable/gallery/user_interfaces/embedding_in_tk_sgskip.html
+
+- git
