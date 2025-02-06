@@ -3,11 +3,21 @@ import matplotlib.pyplot as plt
 
 from src.filter_out_nas import filter_out_nas
 
+PENGUIN_DATA_SOURCE = "data/penguins.csv"
+
 class PenguinDataset():
 
+    data_source = PENGUIN_DATA_SOURCE
+
     def __init__(self):
-        self.data = pd.read_csv("data/penguins.csv")
+        self.data = pd.read_csv(self.data_source)
         self.filtered_data = None
+        self._for_internal_use = "xyz"
+
+    
+    def __repr__(self):
+        return f"Penguin Dataset (with {self.data.shape[0]} entries)"
+
 
     def get_first(self):
         return self.data.iloc[0]
@@ -28,6 +38,7 @@ class PenguinDataset():
             cmap=cmap
         )
         plt.savefig(path)
-    
+
+
     def generate_filtered_data(self):
         self.filtered_data = filter_out_nas(self.data)

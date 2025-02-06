@@ -10,3 +10,7 @@ print(penguin_dataset.filtered_data)
 penguin_dataset.generate_filtered_data()
 
 print(penguin_dataset.filtered_data)
+
+print(penguin_dataset.data_source)
+
+print(penguin_dataset)
