@@ -23,3 +23,9 @@ filtering invalid data:
 ```
 python -m scripts.filter_invalid_data
 ```
+
+exporting a scatter plot:
+
+```
+python -m scripts.export_scatterplot_blen_bdep_species
+```
