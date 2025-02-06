@@ -29,3 +29,9 @@ exporting a scatter plot:
 ```
 python -m scripts.export_scatterplot_blen_bdep_species
 ```
+
+exporting and filtering with a class interface
+
+```
+python -m scripts.export_and_filter_demo
+```
